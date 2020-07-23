@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "football-manager"
+    }
+  },
+  "defaultProject": "football-manager",
+  "cli": {
+    "analytics": false
+  }
 }
