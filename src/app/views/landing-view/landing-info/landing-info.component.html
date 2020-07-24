@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <ngb-carousel *ngIf="images">
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images[0]" alt="Random first slide" />
+        </div>
+        <div class="carousel-caption">
+          <h3>Play a Game!</h3>
+          <p>
+            The Scoutmaster teaches boys to play the game by doing so himself.
+          </p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images[1]" alt="Random second slide" />
+        </div>
+        <div class="carousel-caption">
+          <h3>Win!</h3>
+          <p>
+            Football is a game of mistakes. Whoever makes the fewest mistakes
+            wins.
+          </p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images[2]" alt="Random third slide" />
+        </div>
+        <div class="carousel-caption">
+          <h3>Keep Playing</h3>
+          <p>
+            I've got to perfect my game. Keep working.
+          </p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images[3]" alt="Random third slide" />
+        </div>
+        <div class="carousel-caption">
+          <h3>Play Some more!</h3>
+          <p>
+            I just feel so much more comfortable and confident every game I
+            play.
+          </p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images[4]" alt="Random third slide" />
+        </div>
+        <div class="carousel-caption">
+          <h3>No losers!</h3>
+          <p>
+            We didn't lose the game; We just ran out of time.
+          </p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+</div>
