@@ -15,16 +15,17 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     AppComponent,
     LandingViewComponent,
     PlayersViewComponent,
-    SinglePlayerViewComponent
+    SinglePlayerViewComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-
-
+  imports: [BrowserModule, AppRoutingModule],
+})
 @NgModule({
-  declarations: [AppComponent, LandingViewComponent, LandingInfoComponent, PageNotFoundComponent],
+  declarations: [
+    AppComponent,
+    LandingViewComponent,
+    LandingInfoComponent,
+    PageNotFoundComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
