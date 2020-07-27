@@ -18,7 +18,14 @@ import { SinglePlayerViewComponent } from './views/admin/single-player-view/sing
     BrowserModule,
     AppRoutingModule
   ],
+import { LandingInfoComponent } from './views/landing-view/landing-info/landing-info.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+
+@NgModule({
+  declarations: [AppComponent, LandingViewComponent, LandingInfoComponent, PageNotFoundComponent],
+  imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
