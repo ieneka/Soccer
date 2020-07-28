@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./managers-view.component.css']
 })
 export class ManagersViewComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
 }
+
+
