@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { HeaderComponent } from './views/landing-view/header/header.component';
 import { ForgotPasswordComponent } from './views/landing-view/header/forgot-password/forgot-password.component';
+import { ManagerInfoComponent } from './views/admin/single-manager-view/manager-info/manager-info.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ForgotPasswordComponent } from './views/landing-view/header/forgot-pass
     PageNotFoundComponent,
     LandingFooterComponent,
     HeaderComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    ManagerInfoComponent
   ],
   imports: [
     BrowserModule,
