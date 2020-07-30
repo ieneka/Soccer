@@ -9,17 +9,16 @@ import { LandingViewComponent } from './views/landing-view/landing-view.componen
 import { LandingInfoComponent } from './views/landing-view/landing-info/landing-info.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { HeaderComponent } from './views/landing-view/header/header.component';
-import { ForgotPasswordComponent } from './views/landing-view/header/forgot-password/forgot-password.component';
+
+import { LandingHeaderComponent } from './views/landing-view/landing-header/landing-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingViewComponent,
-    HeaderComponent,
-    ForgotPasswordComponent,
     LandingInfoComponent, 
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LandingHeaderComponent
   ],
   imports: [
     BrowserModule,
