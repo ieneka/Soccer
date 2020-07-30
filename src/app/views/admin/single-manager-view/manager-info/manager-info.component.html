@@ -36,8 +36,8 @@
                 </option>
             </select>  -->
 
-            <select class="w-100 ml-sm-2 p-2" #select multiple (change)="change($event.target.options)">
-                <option *ngFor="let item of myOptions" [value]="item.value">
+            <select class="w-100 ml-sm-2 p-2 form-control" #select multiple (change)="change($event.target.options)">
+                <option *ngFor="let item of myOptions" [value]="item.id">
                   {{item.name}}
                 </option>
               </select>
