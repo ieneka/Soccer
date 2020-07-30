@@ -60,13 +60,20 @@ export class ManagersService {
         {id: 3, name: "Neymar Jr."},
         {id: 4, name: "Kevin de Bruyne"},
         {id: 5, name: "Oblak"},
-      ],    },
+      ],
+    },
     {
       id: 6,
       email: 'manager6@managers.com',
       password: 'password123',
       team_name: 'My Team Name 6',
-      players: ['Messi', 'Cristiano', 'Neymar Jr.', 'Hazard', 'Kevin de Bruyne', 'Oblak']
+      players: [ 
+        {id: 1, name: "Messi"}, 
+        {id: 2, name: "Cristiano"},
+        {id: 3, name: "Neymar Jr."},
+        {id: 4, name: "Kevin de Bruyne"},
+        {id: 5, name: "Oblak"},
+      ],
     },
     {
       id: 7,
@@ -91,7 +98,8 @@ export class ManagersService {
         {id: 3, name: "Neymar Jr."},
         {id: 4, name: "Kevin de Bruyne"},
         {id: 5, name: "Oblak"},
-      ],    },
+      ],
+    },
     {
       id: 9,
       email: 'manager9@managers.com',
@@ -103,7 +111,8 @@ export class ManagersService {
         {id: 3, name: "Neymar Jr."},
         {id: 4, name: "Kevin de Bruyne"},
         {id: 5, name: "Oblak"},
-      ],    },
+      ],
+    },
     {
       id: 10,
       email: 'manager10@managers.com',
@@ -115,7 +124,8 @@ export class ManagersService {
         {id: 3, name: "Neymar Jr."},
         {id: 4, name: "Kevin de Bruyne"},
         {id: 5, name: "Oblak"},
-      ],    },
+      ],
+    },
     {
       id: 11,
       email: 'manager11@managers.com',
@@ -127,7 +137,8 @@ export class ManagersService {
         {id: 3, name: "Neymar Jr."},
         {id: 4, name: "Kevin de Bruyne"},
         {id: 5, name: "Oblak"},
-      ],    },
+      ],
+    },
     {
       id: 12,
       email: 'manager4@managers.com',
@@ -139,7 +150,8 @@ export class ManagersService {
         {id: 3, name: "Neymar Jr."},
         {id: 4, name: "Kevin de Bruyne"},
         {id: 5, name: "Oblak"},
-      ],    },
+      ],
+    },
   ];
   constructor() {}
   getManagers(): Manager[] {

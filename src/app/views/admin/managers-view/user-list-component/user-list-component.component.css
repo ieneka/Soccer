@@ -11,6 +11,10 @@ td span {
     cursor: pointer;
 }
 
+.table-wrapper td a {
+    color: white;
+}
+
 .table-dark {
     color: #FFFDF9;
     background-color: #1b232c;

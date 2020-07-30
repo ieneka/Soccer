@@ -9,9 +9,9 @@
         </thead>
         <tbody>
           <tr *ngFor="let manager of managers">
-            <td>{{manager.email}}</td>
-            <td>{{manager.team_name}}</td>
-            <td><span class="trash-icon" [innerHTML]="trash"></span><span class="search-icon" [innerHTML]="search"></span></td>
+            <td><a [routerLink]="['/admin/user/' + manager.id]">{{manager.email}}</a></td>
+            <td><a [routerLink]="['/admin/user/' + manager.id]">{{manager.team_name}}</a></td>
+            <td><span class="trash-icon" [innerHTML]="trash"></span><a [routerLink]="['/admin/user/' + manager.id]"><span class="search-icon" [innerHTML]="search"></span></a></td>
           </tr>
           
         </tbody>
