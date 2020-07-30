@@ -6,7 +6,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   templateUrl: './landing-header.component.html',
   styleUrls: ['./landing-header.component.css']
 })
-export class HeaderComponent implements OnInit {
+
+export class LandingHeaderComponent implements OnInit {
 
   username: string;
   password: string;
