@@ -30,12 +30,25 @@
         <div class="right-column w-50 ">
             <h2 class="mb-3 ml-sm-2">Players</h2>
 
-            <select class="w-100 ml-sm-2 p-2" name="players" ngModel multiple>
+            <!-- <select class="w-100 ml-sm-2 p-2" name="players" ngModel multiple>
                 <option class="mb-1" *ngFor="let player of players" [ngValue]="player">
                     {{ player }}
                 </option>
-            </select> 
+            </select>  -->
+
+            <select class="w-100 ml-sm-2 p-2" #select multiple (change)="change($event.target.options)">
+                <option *ngFor="let item of myOptions" [value]="item.value">
+                  {{item.name}}
+                </option>
+              </select>
+        </div>
+
+        <div class="buttons mt-3 w-100 d-flex align-items-center justify-content-center">
+            <button type="submit" class="btn btn-outline-warning mr-sm-2 col-5">Create/Update</button>
+            <button class="btn btn-outline-warning ml-sm-2 col-5">Delete</button>
         </div>
     </form>
+
+    {{resultado}}
 
 </div>
