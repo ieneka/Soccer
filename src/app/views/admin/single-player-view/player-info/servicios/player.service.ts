@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class PlayerService {
   private player: Player[] = [
     {
+      id: 1,
       name: 'Messi',
       age: 33,
       aka: 'LM10',
@@ -17,6 +18,7 @@ export class PlayerService {
       attack: 100,
     },
     {
+      id: 2,
       name: 'Cristiano',
       age: 35,
       aka: 'CR7',
@@ -41,6 +43,7 @@ export class PlayerService {
 }
 
 export interface Player {
+  id: number;
   name: string;
   age: number;
   aka: string;
