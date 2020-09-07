@@ -36,10 +36,6 @@ export class PlayerService {
   getPlayer(): Player[] {
     return this.player;
   }
-
-  getPlayeri(idx: string) {
-    return this.player[idx];
-  }
 }
 
 export interface Player {
