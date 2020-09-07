@@ -20,8 +20,5 @@ export class PlayerInfoComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-    this.player = this._PlayerService.getPlayer();
-    console.log(this.player);
-  }
+  ngOnInit(): void {}
 }
