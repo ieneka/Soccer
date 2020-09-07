@@ -36,6 +36,10 @@ export class PlayerService {
   getPlayer(): Player[] {
     return this.player;
   }
+
+  getPlayeri(id: number) {
+    return this.player[id];
+  }
 }
 
 export interface Player {

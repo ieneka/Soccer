@@ -12,14 +12,14 @@
         </thead>
         <tbody>
           <tr *ngFor="let player of player">
-            <th>
+            <td>
               <a [routerLink]="['/admin/player/' + player.id]">{{
                 player.name
               }}</a>
-            </th>
-            <th>
+            </td>
+            <td>
               {{ player.team }}
-            </th>
+            </td>
             <td>
               <a [routerLink]="['admin/player/' + player.id]"
                 ><img src="/assets/Images/trash.png"
