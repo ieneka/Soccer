@@ -3,7 +3,10 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #fac42f;
-    color: #7030a0;
+    background-color: #1D1D1D;
+    color: white;
     text-align: center;
+}
+p{
+    margin: 1rem;
 }
