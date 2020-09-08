@@ -13,6 +13,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { HeaderComponent } from './views/landing-view/header/header.component';
 import { ForgotPasswordComponent } from './views/landing-view/header/forgot-password/forgot-password.component';
+import { LandingHeaderComponent } from './views/landing-view/landing-header/landing-header.component';
+import { ForgotPasswordComponent } from './views/landing-view/landing-header/forgot-password/forgot-password.component';
 import { AdminModule } from './views/admin/admin.module';
 
 @NgModule({
@@ -23,7 +25,7 @@ import { AdminModule } from './views/admin/admin.module';
     LandingInfoComponent,
     PageNotFoundComponent,
     LandingFooterComponent,
-    HeaderComponent,
+    LandingHeaderComponent,
     ForgotPasswordComponent,
   ],
   imports: [

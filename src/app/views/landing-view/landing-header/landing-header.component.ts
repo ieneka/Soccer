@@ -2,18 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
+  selector: 'app-landing-header',
+  templateUrl: './landing-header.component.html',
+  styleUrls: ['./landing-header.component.css']
 })
-export class HeaderComponent implements OnInit {
+
+export class LandingHeaderComponent implements OnInit {
+
   username: string;
   password: string;
   resultado: string;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   formularioLogin = new FormGroup({
     username: new FormControl('', [Validators.required]),
@@ -27,9 +30,10 @@ export class HeaderComponent implements OnInit {
   processForm() {
     if (this.formularioLogin.valid) {
       const allInfo = `Username: ${this.username}. Pwd: ${this.password}.`;
-      this.resultado = allInfo;
+      this.resultado = allInfo; 
     } else {
-      this.resultado = 'Hay datos inválidos en el formulario';
+      this.resultado = "Hay datos inválidos en el formulario";
     }
   }
+
 }
