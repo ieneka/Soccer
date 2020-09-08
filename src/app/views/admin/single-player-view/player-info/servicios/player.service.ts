@@ -7,7 +7,7 @@ export class PlayerService {
   private player: Player[] = [
     {
       id: 1,
-      name: 'Messi',
+      name: 'Lionel Messi',
       age: 33,
       aka: 'LM10',
       img: '/assets/Images/player/messi.jpg',
@@ -19,7 +19,7 @@ export class PlayerService {
     },
     {
       id: 2,
-      name: 'Cristiano',
+      name: 'Cristiano Ronaldo',
       age: 35,
       aka: 'CR7',
       img: '/assets/Images/player/cristiano.jpg',
@@ -73,7 +73,7 @@ export class PlayerService {
       img: '/assets/Images/player/KM.jpg',
       team: 'Paris Saint-Germain FC',
       keeper: 25,
-      defense: 75,
+      defense: 50,
       passing: 100,
       attack: 100,
     },
@@ -87,7 +87,7 @@ export class PlayerService {
       keeper: 25,
       defense: 75,
       passing: 100,
-      attack: 75,
+      attack: 50,
     },
   ];
 
