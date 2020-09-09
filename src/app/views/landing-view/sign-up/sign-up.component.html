@@ -1,7 +1,6 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-8 mx-auto">
-      <div class="card w-50 login-form mx-auto mt-4">
+
+ 
+      <div class="card login-form mx-auto mt-4">
         <div class="card-body">
           <h3 class="card-title text-center">Sign up</h3>
           <div class="card-text">
@@ -13,10 +12,11 @@
                   placeholder="Name"
                   formControlName="name"
                   [class.is-invalid]="nameNotValid"
+                  
                 />
-                <small *ngIf="nameNotValid" class="text-danger"
-                  >Enter your name</small
-                >
+                <small *ngIf="nameNotValid" class="text-danger">
+                    Name is required and must be at least 3 characters long.
+                </small>
               </div>
               <div class="form-group">
                 <input
@@ -27,7 +27,7 @@
                   [class.is-invalid]="surnameNotValid"
                 />
                 <small *ngIf="surnameNotValid" class="text-danger"
-                  >Enter your surname</small
+                  >Name is required and must be at least 3 characters long.</small
                 >
               </div>
               <div class="form-group">
@@ -85,7 +85,7 @@
               <button
                 id="submit-button"
                 type="submit"
-                class="btn btn-outline-warning btn-block rounded-pill"
+                class="btn btn-warning"
               >
                 Sign me up
               </button>
@@ -93,6 +93,5 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+ 
+
