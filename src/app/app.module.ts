@@ -5,7 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingViewComponent } from './views/landing-view/landing-view.component';
-
+import { HeaderComponent } from './views/header/header.component';
+import { NavbarComponent } from './views/header/navbar/navbar.component';
 import { SignUpComponent } from './views/landing-view/sign-up/sign-up.component';
 import { LandingFooterComponent } from './views/landing-view/landing-footer/landing-footer.component';
 import { LandingInfoComponent } from './views/landing-view/landing-info/landing-info.component';
@@ -14,17 +15,21 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { LandingHeaderComponent } from './views/landing-view/landing-header/landing-header.component';
 import { ForgotPasswordComponent } from './views/landing-view/landing-header/forgot-password/forgot-password.component';
 import { AdminModule } from './views/admin/admin.module';
+import { AdminNavbarComponent } from './views/header/admin-navbar/admin-navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingViewComponent,
     SignUpComponent,
-    LandingInfoComponent, 
+    LandingInfoComponent,
     PageNotFoundComponent,
     LandingFooterComponent,
     LandingHeaderComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    HeaderComponent,
+    NavbarComponent,
+    AdminNavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,7 @@ import { AdminModule } from './views/admin/admin.module';
     NgbModule,
     FormsModule,
     HttpClientModule,
-    AdminModule
+    AdminModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
