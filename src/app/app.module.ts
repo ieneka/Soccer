@@ -20,11 +20,11 @@ import { AdminModule } from './views/admin/admin.module';
     AppComponent,
     LandingViewComponent,
     SignUpComponent,
-    LandingInfoComponent, 
+    LandingInfoComponent,
     PageNotFoundComponent,
     LandingFooterComponent,
     LandingHeaderComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +33,7 @@ import { AdminModule } from './views/admin/admin.module';
     NgbModule,
     FormsModule,
     HttpClientModule,
-    AdminModule
+    AdminModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
