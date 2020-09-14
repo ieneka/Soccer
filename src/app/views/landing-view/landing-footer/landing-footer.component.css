@@ -1,12 +1,12 @@
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #1D1D1D;
-    color: white;
-    text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1d1d1d;
+  color: white;
+  text-align: center;
 }
-p{
-    margin: 1rem;
+p {
+  margin: 1rem;
 }

@@ -4,14 +4,10 @@ import { LandingViewComponent } from './views/landing-view/landing-view.componen
 
 // import { SignUpComponent } from './views/landing-view/sign-up/sign-up.component';
 
-
 const routes: Routes = [
-  { path: '', pathMatch: 'full', component: LandingViewComponent},
+  { path: '', pathMatch: 'full', component: LandingViewComponent },
   { path: 'landing', component: LandingViewComponent },
-  
 ];
-
-
 
 @NgModule({
   imports: [
