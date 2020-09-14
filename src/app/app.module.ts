@@ -16,6 +16,7 @@ import { LandingHeaderComponent } from './views/landing-view/landing-header/land
 import { ForgotPasswordComponent } from './views/landing-view/landing-header/forgot-password/forgot-password.component';
 import { AdminModule } from './views/admin/admin.module';
 import { AdminNavbarComponent } from './views/header/admin-navbar/admin-navbar.component';
+import { TeamViewComponent } from './views/team-view/team-view.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AdminNavbarComponent } from './views/header/admin-navbar/admin-navbar.c
     HeaderComponent,
     NavbarComponent,
     AdminNavbarComponent,
+    TeamViewComponent,
   ],
   imports: [
     BrowserModule,
