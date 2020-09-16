@@ -1,6 +1,7 @@
 <header class="navbar d-flex align-items-center justify-content-between">
   <a class="navbar-brand" href="#">Football Academy</a>
-  <app-admin-navbar></app-admin-navbar>
+  <app-navbar *ngIf="player"></app-navbar>
+  <app-admin-navbar *ngIf="admin"></app-admin-navbar>
   <div class="right-header">
     <div class="user">
       <img class="mr-2" [src]="avatar" alt="Avatar" />
