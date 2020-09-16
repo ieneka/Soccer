@@ -1,5 +1,25 @@
 .btn {
-  margin-top: 10px;
   background: #fffdf9;
-  width: 100%;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #fffdf9e0;
+}
+
+.collapse {
+  padding: 0;
+}
+
+.collapse a {
+  color: black;
+  text-decoration: none;
+}
+.card {
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.card:hover {
+  background: #fffdf9e0;
 }
