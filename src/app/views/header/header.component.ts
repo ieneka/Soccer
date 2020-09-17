@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   avatar = 'assets/Images/footgirl.png';
+  admin = true;
+  player = false;
 
   constructor() {}
 
