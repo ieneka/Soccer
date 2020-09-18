@@ -13,6 +13,7 @@ import { PlayerInfoComponent } from './single-player-view/player-info/player-inf
 import { SkillsBarComponent } from './single-player-view/player-info/skills-bar/skills-bar.component';
 import { PlayersViewComponent } from './players-view/players-view.component';
 import { SinglePlayerViewComponent } from './single-player-view/single-player-view.component';
+import { MatchCreatorViewComponent } from './match-creator-view/match-creator-view.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SinglePlayerViewComponent } from './single-player-view/single-player-vi
     ManagersViewComponent,
     ManagerInfoComponent,
     SingleManagerViewComponent,
+    MatchCreatorViewComponent,
   ],
   imports: [
     CommonModule,
