@@ -17,6 +17,7 @@ import { ForgotPasswordComponent } from './views/landing-view/landing-header/for
 import { AdminModule } from './views/admin/admin.module';
 import { AdminNavbarComponent } from './views/header/admin-navbar/admin-navbar.component';
 import { TeamViewModule } from './views/team-view/team-view.module';
+import { MatchCreatorModule } from './views/match-creator-view/match-creator.module';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { TeamViewModule } from './views/team-view/team-view.module';
     HttpClientModule,
     AdminModule,
     TeamViewModule,
+    MatchCreatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
