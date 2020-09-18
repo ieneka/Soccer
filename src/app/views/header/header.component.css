@@ -1,25 +1,25 @@
-header{
-    background-color: #1D1D1D;
-    color: #FFFDF9;
+header {
+  background-color: #354f52;
+  color: #fffdf9;
 }
 
 .navbar-brand {
-    text-transform: uppercase;
-    font-size: 30px;
-    font-weight: bold;
-    color: #FFFDF9; 
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fffdf9;
 }
 
 .user,
 .right-header {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .user p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .user img {
-    width: 50px;
+  width: 50px;
 }
