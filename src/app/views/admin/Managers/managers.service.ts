@@ -9,12 +9,12 @@ export class ManagersService {
       email: 'manager1@managers.com',
       password: 'password123',
       team_name: 'My Team Name',
-      players: [ 
-        {id: 1, name: "Messi"}, 
-        {id: 2, name: "Cristiano"},
-        {id: 3, name: "Neymar Jr."},
-        {id: 4, name: "Kevin de Bruyne"},
-        {id: 5, name: "Oblak"},
+      players: [
+        { id: 1, name: 'Messi' },
+        { id: 2, name: 'Cristiano' },
+        { id: 3, name: 'Neymar Jr.' },
+        { id: 4, name: 'Kevin de Bruyne' },
+        { id: 5, name: 'Oblak' },
       ],
     },
     {
@@ -22,12 +22,12 @@ export class ManagersService {
       email: 'manager2@managers.com',
       password: 'password123',
       team_name: 'My Team Name 2',
-      players: [ 
-        {id: 1, name: "Messi"}, 
-        {id: 2, name: "Cristiano"},
-        {id: 3, name: "Neymar Jr."},
-        {id: 4, name: "Kevin de Bruyne"},
-        {id: 5, name: "Oblak"},
+      players: [
+        { id: 1, name: 'Messi' },
+        { id: 2, name: 'Cristiano' },
+        { id: 3, name: 'Neymar Jr.' },
+        { id: 4, name: 'Kevin de Bruyne' },
+        { id: 5, name: 'Oblak' },
       ],
     },
     {
@@ -35,31 +35,39 @@ export class ManagersService {
       email: 'manager3@managers.com',
       password: 'password123',
       team_name: 'My Team Name 3',
-      players: [ 
-        {id: 1, name: "Messi"}, 
-        {id: 2, name: "Cristiano"},
-        {id: 3, name: "Neymar Jr."},
-        {id: 4, name: "Kevin de Bruyne"},
-        {id: 5, name: "Oblak"},
-      ],    },
+      players: [
+        { id: 1, name: 'Messi' },
+        { id: 2, name: 'Cristiano' },
+        { id: 3, name: 'Neymar Jr.' },
+        { id: 4, name: 'Kevin de Bruyne' },
+        { id: 5, name: 'Oblak' },
+      ],
+    },
     {
       id: 4,
       email: 'manager4@managers.com',
       password: 'password123',
       team_name: 'My Team Name 4',
-      players: ['Messi', 'Cristiano', 'Neymar Jr.', 'Hazard', 'Kevin de Bruyne', 'Oblak']
+      players: [
+        'Messi',
+        'Cristiano',
+        'Neymar Jr.',
+        'Hazard',
+        'Kevin de Bruyne',
+        'Oblak',
+      ],
     },
     {
       id: 5,
       email: 'manager5@managers.com',
       password: 'password123',
       team_name: 'My Team Name 5',
-      players: [ 
-        {id: 1, name: "Messi"}, 
-        {id: 2, name: "Cristiano"},
-        {id: 3, name: "Neymar Jr."},
-        {id: 4, name: "Kevin de Bruyne"},
-        {id: 5, name: "Oblak"},
+      players: [
+        { id: 1, name: 'Messi' },
+        { id: 2, name: 'Cristiano' },
+        { id: 3, name: 'Neymar Jr.' },
+        { id: 4, name: 'Kevin de Bruyne' },
+        { id: 5, name: 'Oblak' },
       ],
     },
     {
@@ -67,12 +75,12 @@ export class ManagersService {
       email: 'manager6@managers.com',
       password: 'password123',
       team_name: 'My Team Name 6',
-      players: [ 
-        {id: 1, name: "Messi"}, 
-        {id: 2, name: "Cristiano"},
-        {id: 3, name: "Neymar Jr."},
-        {id: 4, name: "Kevin de Bruyne"},
-        {id: 5, name: "Oblak"},
+      players: [
+        { id: 1, name: 'Messi' },
+        { id: 2, name: 'Cristiano' },
+        { id: 3, name: 'Neymar Jr.' },
+        { id: 4, name: 'Kevin de Bruyne' },
+        { id: 5, name: 'Oblak' },
       ],
     },
     {
@@ -80,24 +88,25 @@ export class ManagersService {
       email: 'manager7@managers.com',
       password: 'password123',
       team_name: 'My Team Name 7',
-      players: [ 
-        {id: 1, name: "Messi"}, 
-        {id: 2, name: "Cristiano"},
-        {id: 3, name: "Neymar Jr."},
-        {id: 4, name: "Kevin de Bruyne"},
-        {id: 5, name: "Oblak"},
-      ],    },
+      players: [
+        { id: 1, name: 'Messi' },
+        { id: 2, name: 'Cristiano' },
+        { id: 3, name: 'Neymar Jr.' },
+        { id: 4, name: 'Kevin de Bruyne' },
+        { id: 5, name: 'Oblak' },
+      ],
+    },
     {
       id: 8,
       email: 'manager8@managers.com',
       password: 'password123',
       team_name: 'My Team Name 8',
-      players: [ 
-        {id: 1, name: "Messi"}, 
-        {id: 2, name: "Cristiano"},
-        {id: 3, name: "Neymar Jr."},
-        {id: 4, name: "Kevin de Bruyne"},
-        {id: 5, name: "Oblak"},
+      players: [
+        { id: 1, name: 'Messi' },
+        { id: 2, name: 'Cristiano' },
+        { id: 3, name: 'Neymar Jr.' },
+        { id: 4, name: 'Kevin de Bruyne' },
+        { id: 5, name: 'Oblak' },
       ],
     },
     {
@@ -105,12 +114,12 @@ export class ManagersService {
       email: 'manager9@managers.com',
       password: 'password123',
       team_name: 'My Team Name 9',
-      players: [ 
-        {id: 1, name: "Messi"}, 
-        {id: 2, name: "Cristiano"},
-        {id: 3, name: "Neymar Jr."},
-        {id: 4, name: "Kevin de Bruyne"},
-        {id: 5, name: "Oblak"},
+      players: [
+        { id: 1, name: 'Messi' },
+        { id: 2, name: 'Cristiano' },
+        { id: 3, name: 'Neymar Jr.' },
+        { id: 4, name: 'Kevin de Bruyne' },
+        { id: 5, name: 'Oblak' },
       ],
     },
     {
@@ -118,12 +127,12 @@ export class ManagersService {
       email: 'manager10@managers.com',
       password: 'password123',
       team_name: 'My Team Name 10',
-      players: [ 
-        {id: 1, name: "Messi"}, 
-        {id: 2, name: "Cristiano"},
-        {id: 3, name: "Neymar Jr."},
-        {id: 4, name: "Kevin de Bruyne"},
-        {id: 5, name: "Oblak"},
+      players: [
+        { id: 1, name: 'Messi' },
+        { id: 2, name: 'Cristiano' },
+        { id: 3, name: 'Neymar Jr.' },
+        { id: 4, name: 'Kevin de Bruyne' },
+        { id: 5, name: 'Oblak' },
       ],
     },
     {
@@ -131,12 +140,12 @@ export class ManagersService {
       email: 'manager11@managers.com',
       password: 'password123',
       team_name: 'My Team Name 11',
-      players: [ 
-        {id: 1, name: "Messi"}, 
-        {id: 2, name: "Cristiano"},
-        {id: 3, name: "Neymar Jr."},
-        {id: 4, name: "Kevin de Bruyne"},
-        {id: 5, name: "Oblak"},
+      players: [
+        { id: 1, name: 'Messi' },
+        { id: 2, name: 'Cristiano' },
+        { id: 3, name: 'Neymar Jr.' },
+        { id: 4, name: 'Kevin de Bruyne' },
+        { id: 5, name: 'Oblak' },
       ],
     },
     {
@@ -144,12 +153,12 @@ export class ManagersService {
       email: 'manager4@managers.com',
       password: 'password123',
       team_name: 'My Team Name 4',
-      players: [ 
-        {id: 1, name: "Messi"}, 
-        {id: 2, name: "Cristiano"},
-        {id: 3, name: "Neymar Jr."},
-        {id: 4, name: "Kevin de Bruyne"},
-        {id: 5, name: "Oblak"},
+      players: [
+        { id: 1, name: 'Messi' },
+        { id: 2, name: 'Cristiano' },
+        { id: 3, name: 'Neymar Jr.' },
+        { id: 4, name: 'Kevin de Bruyne' },
+        { id: 5, name: 'Oblak' },
       ],
     },
   ];
@@ -163,5 +172,6 @@ export interface Manager {
   email: string;
   password: string;
   team_name: string;
+
   players: {};
 }

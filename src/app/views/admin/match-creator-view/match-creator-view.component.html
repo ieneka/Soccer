@@ -1,1 +1,23 @@
-<p>match-creator-view works!</p>
+<div class="container-fluid pt-2">
+  <div>
+    <app-team-selector></app-team-selector>
+  </div>
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="col-3 d-flex justify-content-center mt-5">
+      <input
+        class="bg-dark text-white btn"
+        type="date"
+        id="start"
+        name="trip-start"
+        value="year-month-day"
+        min="2021-01-01"
+        max="2023-12-31"
+      />
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="col-3 d-flex justify-content-center mt-5">
+      <a class="btn btn-outline-warning w-100 mt-4 text-white">Create Match</a>
+    </div>
+  </div>
+</div>
