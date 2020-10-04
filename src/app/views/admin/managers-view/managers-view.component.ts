@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatchcreatorService } from '../../../services/matchcreator.service';
 
 @Component({
   selector: 'app-managers-view',

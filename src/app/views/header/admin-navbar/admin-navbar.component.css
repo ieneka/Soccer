@@ -1,3 +1,7 @@
 .navbar a {
-  color: white;
+    color: white;
+}
+
+.navbar a:hover {
+    color: #ffca3a;
 }
