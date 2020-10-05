@@ -15,10 +15,19 @@ export class PlayerInfoComponent implements OnInit {
     private _PlayerService: PlayerService
   ) {
     this.activatedRoute.params.subscribe((params) => {
-      this.player = this._PlayerService.getPlayeri(params['id']);
+      this.getPlayeri(params['id']);
       console.log(this.player);
     });
   }
 
   ngOnInit(): void {}
-}
+
+  getPlayeri(id: number){
+    this._PlayerService.getPlayeri(id).subscribe(
+      (data: any) => {
+        this.player = data;
+        console.log(this.player);
+      }
+    );
+      }
+  }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PlayerService } from '../single-player-view/player-info/servicios/player.service';
+import { PlayerService, Player } from '../single-player-view/player-info/servicios/player.service';
 
 @Component({
   selector: 'app-players-view',
@@ -7,10 +7,21 @@ import { PlayerService } from '../single-player-view/player-info/servicios/playe
   styleUrls: ['./players-view.component.css'],
 })
 export class PlayersViewComponent implements OnInit {
-  headers = ['Player Name', 'Team'];
-  player: any = {};
 
-  constructor(private _PlayerService: PlayerService) {}
+  constructor(private _PlayerService: PlayerService) {
+    this._PlayerService.getPlayer().subscribe(
+      (data: any) => {
+        console.log(data);
+        this.player = data;
+        console.log(this.player);
+      }
+    );
+  }
+
+
+  headers = ['Player Name', 'Team'];
+  player: any[] = [{}];
+
 
   ngOnInit(): void {
     this.player = this._PlayerService.getPlayer();

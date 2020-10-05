@@ -15,10 +15,18 @@ export class SkillsBarComponent implements OnInit {
     private _PlayerService: PlayerService
   ) {
     this.activatedRoute.params.subscribe((params) => {
-      this.player = this._PlayerService.getPlayeri(params['id']);
-      console.log(this.player);
+      this.getPlayeri(params['id']);
     });
   }
 
   ngOnInit(): void {}
+
+  getPlayeri(id: number){
+    this._PlayerService.getPlayeri(id).subscribe(
+      (data: any) => {
+        this.player = data;
+        console.log(this.player);
+      }
+    );
+      }
 }
