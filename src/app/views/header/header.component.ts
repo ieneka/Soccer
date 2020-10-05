@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  avatar = 'assets/Images/footgirl.png';
+  avatar = 'assets/icons/user.png';
   admin = true;
   player = false;
 

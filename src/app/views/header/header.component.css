@@ -1,25 +1,28 @@
-header {
-  background-color: #354f52;
-  color: #fffdf9;
+header,
+nav {
+    background-color: #354f52;
+    color: #fffdf9;
 }
 
 .navbar-brand {
-  text-transform: uppercase;
-  font-size: 30px;
-  font-weight: bold;
-  color: #fffdf9;
+    padding: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fffdf9;
+}
+
+.academy {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fffdf9;
 }
 
 .user,
 .right-header {
-  display: flex;
-  align-items: center;
-}
-
-.user p {
-  margin-bottom: 0;
+    display: flex;
+    align-items: center;
 }
 
 .user img {
-  width: 50px;
+    width: 25px;
 }
