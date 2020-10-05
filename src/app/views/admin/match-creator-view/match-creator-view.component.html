@@ -1,23 +1,15 @@
-<div class="container-fluid pt-2">
-  <div>
-    <app-team-selector></app-team-selector>
-  </div>
-  <div class="row d-flex justify-content-center mt-5">
-    <div class="col-3 d-flex justify-content-center mt-5">
-      <input
-        class="bg-dark text-white btn"
-        type="date"
-        id="start"
-        name="trip-start"
-        value="year-month-day"
-        min="2021-01-01"
-        max="2023-12-31"
-      />
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-6 bg-white justify-content-center my-auto">
+            <h3 class="text-center mt-5">Match Creator</h3>
+            <div>
+                <app-team-selector></app-team-selector>
+            </div>
+
+            <h5 class="text-center mt-5">Day of the Match:</h5>
+            <input class=" text-center form-control w-50 my-1 mx-auto" type="date" id="start" name="trip-start" value="year-month-day" min="2021-01-01" max="2023-12-31" />
+            <a class="btn btn-warning w-100 my-3">Create Match</a>
+
+        </div>
     </div>
-  </div>
-  <div class="row d-flex justify-content-center mt-5">
-    <div class="col-3 d-flex justify-content-center mt-5">
-      <a class="btn btn-outline-warning w-100 mt-4 text-white">Create Match</a>
-    </div>
-  </div>
 </div>
