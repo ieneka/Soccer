@@ -1,30 +1,17 @@
-<div class="card login-form mx-auto">
-  <div class="card-body">
-    <h3 class="card-title text-center">Sign up</h3>
-    <div class="card-text">
-      <form id="login-form" [formGroup]="form" (ngSubmit)="sign()">
-        <div class="form-group">
-          <input
-            type="name"
-            class="form-control form-control-sm"
-            placeholder="Name"
-            formControlName="name"
-            [class.is-invalid]="nameNotValid"
-          />
-          <small *ngIf="nameNotValid" class="text-danger">
+<div class="card login-form mx-auto my-5">
+    <div class="card-body">
+        <h3 class="card-title text-center">Sign up</h3>
+        <div class="card-text">
+            <form id="login-form" [formGroup]="form" (ngSubmit)="sign()">
+                <div class="form-group">
+                    <input type="name" class="form-control form-control-sm" placeholder="Name" formControlName="name" [class.is-invalid]="nameNotValid" />
+                    <small *ngIf="nameNotValid" class="text-danger">
             Name is required and must be at least 3 characters long.
           </small>
-        </div>
-        <div class="form-group">
-          <input
-            type="surname"
-            class="form-control form-control-sm"
-            placeholder="Surname"
-            formControlName="surname"
-            [class.is-invalid]="surnameNotValid"
-          />
-          <small *ngIf="surnameNotValid" class="text-danger"
-            >Name is required and must be at least 3 characters long.</small
+                </div>
+                <div class="form-group">
+                    <input type="surname" class="form-control form-control-sm" placeholder="Surname" formControlName="surname" [class.is-invalid]="surnameNotValid" />
+                    <small *ngIf="surnameNotValid" class="text-danger">Name is required and must be at least 3 characters long.</small
           >
         </div>
         <div class="form-group">
