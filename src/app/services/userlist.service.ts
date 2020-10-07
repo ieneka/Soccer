@@ -17,3 +17,9 @@ export class UserListService {
 getUsers(): Observable<Manager[]> {
   return this.http.get<Manager[]>(this.usersUrl)
 }}
+
+export interface User {
+  id: number;
+  typeuser: string;
+  email: string;
+}
