@@ -17,7 +17,12 @@ import { ForgotPasswordComponent } from './views/landing-view/landing-header/for
 import { AdminModule } from './views/admin/admin.module';
 import { AdminNavbarComponent } from './views/header/admin-navbar/admin-navbar.component';
 import { TeamViewModule } from './views/team-view/team-view.module';
-import { DatePipe } from '@angular/common'
+import { DatePipe } from '@angular/common';
+import { LineupComponent } from './views/lineup/lineup.component';
+import {MatCardModule} from '@angular/material/card';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+
+
 
 @NgModule({
   declarations: [
@@ -32,6 +37,9 @@ import { DatePipe } from '@angular/common'
     HeaderComponent,
     NavbarComponent,
     AdminNavbarComponent,
+    LineupComponent,
+    
+   
   ],
   imports: [
     BrowserModule,
@@ -42,6 +50,10 @@ import { DatePipe } from '@angular/common'
     HttpClientModule,
     AdminModule,
     TeamViewModule,
+    MatCardModule,
+    DragDropModule,
+    
+    
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent],
