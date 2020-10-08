@@ -33,6 +33,6 @@ getUsers(): Observable<Manager[]> {
 
 export interface User {
   id: number;
-  typeuser: string;
+  typeUser: string;
   email: string;
 }
