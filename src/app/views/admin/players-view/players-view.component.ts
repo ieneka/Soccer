@@ -27,4 +27,13 @@ export class PlayersViewComponent implements OnInit {
     this.player = this._PlayerService.getPlayer();
     console.log(this.player);
   }
+
+  deletePlayeri(id: number){
+    this._PlayerService.deletePlayeri(id).subscribe(
+      (data: any) => {
+        this.player = data;
+        console.log(this.player);
+      });
+    }
+
 }

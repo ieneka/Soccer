@@ -27,7 +27,6 @@ export class PlayerInfoComponent implements OnInit {
       (data: any) => {
         this.player = data;
         console.log(this.player);
-      }
-    );
-      }
+      });
+    }
   }

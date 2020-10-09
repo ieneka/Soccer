@@ -23,6 +23,10 @@ export class PlayerService {
   getPlayeri(id: number) {
     return this.getQuery(`players/${id}`).pipe(map(data => data['player']));
   }
+  deletePlayeri(id: number){
+    const url = `http://217.76.158.200:8181/api/players/${id}`;
+    return this.http.delete(url).pipe(map(data => data['player']));
+  }
 }
 
 export interface Player {
