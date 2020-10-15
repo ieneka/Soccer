@@ -19,6 +19,13 @@ import { AdminNavbarComponent } from './views/header/admin-navbar/admin-navbar.c
 import { TeamViewModule } from './views/team-view/team-view.module';
 import { DatePipe } from '@angular/common';
 
+import { LineupComponent } from './views/lineup/lineup.component';
+import {MatCardModule} from '@angular/material/card';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +39,9 @@ import { DatePipe } from '@angular/common';
     HeaderComponent,
     NavbarComponent,
     AdminNavbarComponent,
+    LineupComponent,
+    
+   
   ],
   imports: [
     BrowserModule,
@@ -42,6 +52,10 @@ import { DatePipe } from '@angular/common';
     HttpClientModule,
     AdminModule,
     TeamViewModule,
+    MatCardModule,
+    DragDropModule,
+    
+    
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent],
