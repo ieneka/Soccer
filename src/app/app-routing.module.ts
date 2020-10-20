@@ -19,7 +19,7 @@ const routes: Routes = [
       anchorScrolling: 'enabled',
     }),
   ],
-  //[RouterModule.forRoot(routes)],
+  // [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

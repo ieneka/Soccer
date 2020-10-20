@@ -1,13 +1,21 @@
-<div class="container text-center">
-  <h1>IT Academy Team</h1>
-  <h2>Foundation Date: 1990</h2>
-  <p>Manager: <span>John Doe</span></p>
-  <p>Number of Player: <span> 20</span></p>
-  <p>
-    Last Five Results:
-    <span>
-      <app-last-five-results></app-last-five-results>
-    </span>
-  </p>
-  <app-best-players-layout></app-best-players-layout>
+<div class="container">
+    <div class="card bg-light justify-content-center text-dark">
+        <h1 class="pt-5 px-5 ">IT Academy Team</h1>
+        <hr>
+        <div class="px-5">
+            <p><span>Foundation Date:</span> 1990</p>
+            <p><span>Manager:</span> John Doe</p>
+            <p> <span> Number of Player: </span> 20</p>
+        </div>
+
+        <hr>
+        <div class="px-5">
+            <p> <span>Last Five Results: </span></p>
+
+            <app-last-five-results></app-last-five-results>
+        </div>
+        <hr>
+        <app-best-players-layout class="my-3"></app-best-players-layout>
+    </div>
+
 </div>
