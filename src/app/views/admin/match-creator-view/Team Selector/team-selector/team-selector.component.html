@@ -3,7 +3,7 @@
         <div class="col-5 justify-content-center">
             <img src="/assets/icons/emblem_purple.png" class="img-fluid mx-auto" />
             <select [(ngModel)]="teamLocal" (ngModelChange)='passTeams(teamLocal, teamVisitor)' class="custom-select">
-            <option>Select Local Team</option>
+            <option disabled hidden [value]="selectUndefinedOptionValue"> Select Local Team</option>
             <ng-container *ngFor="let team of teams">
             <option *ngIf="(team.id != teamVisitor)" [ngValue]='team.id'>
               {{ team.name }}
@@ -19,7 +19,7 @@
         <div class="col-5 justify-content-center">
             <img src="/assets/icons/emblem_yellow.png" class="img-fluid  mx-auto" />
             <select [(ngModel)]="teamVisitor" (ngModelChange)='passTeams(teamLocal, teamVisitor)' class="custom-select">
-          <option>Select Visitor Team</option>
+          <option disabled hidden [value]="selectUndefinedOptionValue">Select Visitor Team</option>
           <ng-container *ngFor="let team of teams">
           <option *ngIf="(team.id != teamLocal)" [ngValue]='team.id'>
             {{ team.name}}
