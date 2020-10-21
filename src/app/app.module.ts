@@ -22,6 +22,8 @@ import { DatePipe } from '@angular/common';
 import { LineupComponent } from './views/lineup/lineup.component';
 import {MatCardModule} from '@angular/material/card';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { MarketViewComponent } from './views/market-view/market-view.component';
+import { SkillFilterComponent } from './views/market-view/skill-filter/skill-filter.component';
 
 
 
@@ -40,6 +42,8 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     NavbarComponent,
     AdminNavbarComponent,
     LineupComponent,
+    MarketViewComponent,
+    SkillFilterComponent,
     
    
   ],
