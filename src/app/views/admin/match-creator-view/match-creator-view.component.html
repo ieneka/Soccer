@@ -12,8 +12,8 @@
 
 
             <h5 class="text-center mt-3">Day of the Match:</h5>
-            <input #dateInput class=" text-center form-control w-50 my-1 mx-auto" type="date" id="start" name="trip-start" placeholder="yyyy-mm-dd" min="1900-01-01" max="2023-12-31" />
-            <!-- <input class=" text-center form-control w-50 my-1 mx-auto" type="date" id="start" name="trip-start" placeholder="year-month-day" min="2021-01-01" max="2023-12-31" [ngModel]="matchDate" (ngModelChange)="getDate($event)" /> -->
+            <input #dateInput class=" text-center form-control w-50 my-1 mx-auto" type="date" id="start" name="trip-start"   min="1900-01-01" max="2023-12-31"/>
+            
             <a class="btn btn-warning w-100 my-3" (click)="getDate(dateInput.value)">Create Match</a>
 
         </div>

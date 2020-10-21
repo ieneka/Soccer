@@ -7,6 +7,7 @@ import { MatchcreatorService } from '../../../../../services/matchcreator.servic
   styleUrls: ['./team-selector.component.css'],
 })
 export class TeamSelectorComponent {
+  selectUndefinedOptionValue: any;
   teams: any[] = [{}];
   teamLocal: number;
   teamVisitor: number;
