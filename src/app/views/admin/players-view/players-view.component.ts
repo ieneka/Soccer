@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PlayerService, Player } from '../single-player-view/player-info/servicios/player.service';
+import { PlayerListService } from '../../../services/player-list.service';
 
 @Component({
   selector: 'app-players-view',
@@ -7,9 +7,11 @@ import { PlayerService, Player } from '../single-player-view/player-info/servici
   styleUrls: ['./players-view.component.css'],
 })
 export class PlayersViewComponent implements OnInit {
+  headers = ['Player Name', 'Team'];
+  player: any = {};
 
-  constructor(private _PlayerService: PlayerService) {
-    this._PlayerService.getPlayer().subscribe(
+  constructor(private playerListService: PlayerListService) {
+    this.playerListService.getPlayers().subscribe(
       (data: any) => {
         console.log(data);
         this.player = data;
@@ -18,22 +20,17 @@ export class PlayersViewComponent implements OnInit {
     );
   }
 
-
-  headers = ['Player Name', 'Team'];
-  player: any[] = [{}];
-
-
   ngOnInit(): void {
-    this.player = this._PlayerService.getPlayer();
+    this.player = this.playerListService.getPlayers();
     console.log(this.player);
   }
 
-  deletePlayeri(id: number){
-    this._PlayerService.deletePlayeri(id).subscribe(
-      (data: any) => {
-        this.player = data;
-        console.log(this.player);
-      });
+  deletePlayer(id: string){
+    const ok = confirm(`Está seguro que desea borrar a este jugador?`);
+    if (ok == true){
+      this.playerListService.deletePlayer( id ).subscribe();
     }
+  }
 
 }
+

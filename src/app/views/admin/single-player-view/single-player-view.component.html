@@ -9,10 +9,10 @@
             <app-skills-bar></app-skills-bar>
         </div>
         <div class="col-4 pb-3">
-            <button class="btn btn-outline-warning btn-sm rounded-pill">
-        Create/Update
+            <button class="btn btn-warning btn-sm" [routerLink]="['/admin/playercreator/', player.id]">
+        Update
       </button>
-            <button class="btn btn-outline-warning btn-sm rounded-pill ml-4">
+            <button class="btn btn-warning btn-sm ml-4" (click)="deletePlayer(player.id)">
         Delete
       </button>
         </div>

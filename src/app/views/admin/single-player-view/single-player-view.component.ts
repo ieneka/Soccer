@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
+import { PlayerListService } from '../../../services/player-list.service';
 
 @Component({
   selector: 'app-single-player-view',
@@ -7,7 +8,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./single-player-view.component.css'],
 })
 export class SinglePlayerViewComponent implements OnInit {
-  constructor() {}
+  player: any = {};
+
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private playerListService: PlayerListService
+  ) {
+    this.activatedRoute.params.subscribe((params) => {
+      this.getPlayeri(params['id']);
+    });
+  }
 
   ngOnInit(): void {}
+
+  getPlayeri(id: string){
+    this.playerListService.getPlayeri(id).subscribe(
+      (data: any) => {
+        this.player = data;
+        console.log(this.player);
+      }
+    );
+      }
+  deletePlayer(id: string){
+    const ok = confirm(`Está seguro que desea borrar a ${this.player.name}?`)
+    if(ok == true){
+      this.playerListService.deletePlayer( id ).subscribe();
+    }
+    
+  }
 }

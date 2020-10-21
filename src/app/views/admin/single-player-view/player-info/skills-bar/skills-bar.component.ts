@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PlayerService } from '../servicios/player.service';
+import { PlayerListService } from '../../../../../services/player-list.service';
 
 @Component({
   selector: 'app-skills-bar',
@@ -12,7 +12,7 @@ export class SkillsBarComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private _PlayerService: PlayerService
+    private playerListService: PlayerListService
   ) {
     this.activatedRoute.params.subscribe((params) => {
       this.getPlayeri(params['id']);
@@ -21,8 +21,8 @@ export class SkillsBarComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  getPlayeri(id: number){
-    this._PlayerService.getPlayeri(id).subscribe(
+  getPlayeri(id: string){
+    this.playerListService.getPlayeri(id).subscribe(
       (data: any) => {
         this.player = data;
         console.log(this.player);
@@ -30,3 +30,4 @@ export class SkillsBarComponent implements OnInit {
     );
       }
 }
+
