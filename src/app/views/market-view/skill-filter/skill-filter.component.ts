@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillFilterComponent implements OnInit {
 
-
+  years: number[];
 
   constructor() {
 
+    this.years = new Array ( 100 ).fill( 0 ).map( (x, i) => i + 1);
+    
   }
 
   ngOnInit(): void {

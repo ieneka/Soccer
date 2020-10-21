@@ -1,66 +1,66 @@
 <div class="container">
-    <div class="card p-5">
+    <div class="card p-3 p-md-5">
         <div class="row">
             <h1 class="pl-3">Skills</h1>
         </div>
         <hr>
-        <div class="row justify-content-between">
-            <div class="col-6">
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1">Max-age</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                          <option> 1 </option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                  </select>
-                </div>
 
+        <div class="row row-cols-1 row-cols-md-3 justify-content-between ">
+
+            <div class="col col-md-6">
+                <div class="form-group">
+                    <label for="max-age">Max-age</label>
+                    <select class="form-control" id="max-age">
+                              <option *ngFor="let year of years">{{ year }}</option>
+                        </select>
+                </div>
             </div>
-            <div class="col-6">
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1">Min-age</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                              <option> 1 </option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                      </select>
-                </div>
 
+            <div class="col col-md-6">
+                <div class="form-group">
+                    <label for="min-age">Min-age</label>
+                    <select class="form-control" id="min-age">
+                                <option *ngFor="let year of years">{{ year }}</option>
+                          </select>
+                </div>
             </div>
         </div>
-        <div class="row justify-content-between mt-5">
-            <div class="col-6">
+
+
+        <div class="row row-cols-1 row-cols-md-3  mt-5">
+            <div class="col col-md-4">
                 <p>Attack (between 0 and 50)</p>
-                <form>
-                    <input class="col" type="range" id="attack" name="attack" min="0" max="50">
+                <form class="slidercontainer">
+                    <input class="col slider" type="range" id="attack" name="attack" min="0" max="50">
                 </form>
             </div>
-            <div class="col-6">
+            <div class="col col-md-4">
                 <p>Defense (between 0 and 50)</p>
                 <form>
                     <input class="col" type="range" id="defense" name="defense" min="0" max="50">
                 </form>
             </div>
+
         </div>
 
-        <div class="row justify-content-between mt-3">
-            <div class="col-6">
+        <div class="row row-cols-1 row-cols-md-3  mt-5">
+            <div class="col col-md-4">
                 <p>Pass (between 0 and 50)</p>
                 <form>
                     <input class="col" type="range" id="pass" name="pass" min="0" max="50">
                 </form>
             </div>
-            <div class="col-6">
+            <div class="col col-md-4">
                 <p>Keeper (between 0 and 50)</p>
                 <form>
                     <input class="col" type="range" id="defense" name="defense" min="0" max="50">
                 </form>
             </div>
 
+
+            <div class="col col-md-3 my-5 my-md-0 d-flex align-items-md-end mx-md-auto">
+                <button type="button" class="btn btn-warning w-100 ">Warning</button>
+            </div>
         </div>
 
     </div>
