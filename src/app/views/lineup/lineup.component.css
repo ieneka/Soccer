@@ -11,7 +11,7 @@ body {
     height: 10rem;
 }
 
-/* COL DERECHA*/
+/* PLAYGROUND*/
 .playgroung-container h5 {
     color: white;
 }
@@ -39,7 +39,7 @@ h2 {
     font-weight: 700;
 }
 
-/*COL IZQUIERDA*/
+/*TEAM*/
 .izquierdo{
     background-color: #343A40;
     border-radius: 4px;
@@ -73,18 +73,20 @@ h2 {
     height: 514px;
     padding: 0.5rem;
     border-radius: 4px;
-    /* overflow-y: scroll; */
 }
 
 .card {
     margin: 1em;
     cursor: pointer;
-    width: 190px;
-    height: 80px;
+    width: 11rem;
+    height: 5rem;
     border-radius: 8px;
     border: 1px solid  white;
     box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
     
+}
+#card-player{
+    font-size: 1rem;
 }
 
 .list {
@@ -109,7 +111,7 @@ h2 {
     box-sizing: border-box;
     cursor: move;
     background: white;
-    font-size: 14px;
+    font-size: 0.6px;
 }
 
 .cdk-drag-preview {
@@ -135,16 +137,27 @@ h2 {
 }
 
 /*MEDIA QUERY*/
+@media (min-width:1199px) and (max-width: 1295px){
+    #card-player{
+        font-size: 0.6rem;
+    }
+    .card{
+        width: 10rem;
+        height: 4rem;
+    }
+    .cirlceImage {
+        height: 3rem;
+    }
+    
+}
 @media (max-width: 889px){
     h2{
         margin-bottom: 2rem;
     }
     .card{
-        width: 12rem;
+        width: 9rem;
+        height: 3rem;
     }
-    /* #player p{
-        size: 2px;
-    } */
     .playgroung-container {
         height: 20rem;
     }
@@ -157,13 +170,31 @@ h2 {
     .izquierda{
         height: 50rem;
     }
+    #card-player{
+        font-size: 0.6rem;
+    }
 }
 @media (min-width:600px) and (max-width: 889px){
     .playgroung-container {
         height: 28rem;
 
     }
-    #card-player{
-        font-size: 1px;
-    }
 }
+@media (min-width:300px) and (max-width: 500px){
+    .playgroung-container {
+        height: 15rem;
+    }
+    #card-player{
+        font-size: 0.6rem;
+    }
+    .card{
+        width: 7rem;
+        height: 3rem;
+    }
+    .cirlceImage {
+        height: 1.4rem;
+        width: 1.4rem;
+    }
+
+}
+
