@@ -39,7 +39,7 @@ export class PlayerListService {
   updatePlayer(player: PlayerModel){
 
     return this.http.put(`${this.url}/players/${player.id}`, player);
-  
+
   }
 }
 

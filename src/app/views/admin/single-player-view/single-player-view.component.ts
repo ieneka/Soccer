@@ -30,10 +30,9 @@ export class SinglePlayerViewComponent implements OnInit {
     );
       }
   deletePlayer(id: string){
-    const ok = confirm(`Está seguro que desea borrar a ${this.player.name}?`)
+    const ok = confirm(`Are you sure you want to delete ${this.player.name}?`)
     if(ok == true){
       this.playerListService.deletePlayer( id ).subscribe();
     }
-    
   }
 }

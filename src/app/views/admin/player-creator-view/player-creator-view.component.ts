@@ -30,7 +30,7 @@ export class PlayerCreatorViewComponent implements OnInit {
     }
   }
 
-  guardar(form: NgForm){
+  save(form: NgForm){
     if (form.invalid) {
       console.log('formulario invalido');
       return;

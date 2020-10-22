@@ -26,7 +26,7 @@ export class PlayersViewComponent implements OnInit {
   }
 
   deletePlayer(id: string){
-    const ok = confirm(`Está seguro que desea borrar a este jugador?`);
+    const ok = confirm(`Are you sure you want to delete this player?`);
     if (ok == true){
       this.playerListService.deletePlayer( id ).subscribe();
     }
