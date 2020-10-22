@@ -1,20 +1,20 @@
 <div class="container-fluid">
-  <div class="row justify-content-center mt-5">
-    <div class="col">
-      <app-player-info></app-player-info>
+    <div class="row justify-content-center mt-5">
+        <div class="col">
+            <app-player-info></app-player-info>
+        </div>
     </div>
-  </div>
-  <div class="row align-items-end justify-content-center">
-    <div class="col-4 pt-4">
-      <app-skills-bar></app-skills-bar>
-    </div>
-    <div class="col-4 pb-3">
-      <button class="btn btn-outline-warning btn-sm rounded-pill">
-        Create/Update
+    <div class="row align-items-end justify-content-center">
+        <div class="col-4 pt-4">
+            <app-skills-bar></app-skills-bar>
+        </div>
+        <div class="col-4 pb-3">
+            <button class="btn btn-warning btn-sm" [routerLink]="['/admin/playercreator/', player.id]">
+        Update
       </button>
-      <button class="btn btn-outline-warning btn-sm rounded-pill ml-4">
+            <button class="btn btn-warning btn-sm ml-4" (click)="deletePlayer(player.id)">
         Delete
       </button>
+        </div>
     </div>
-  </div>
 </div>
