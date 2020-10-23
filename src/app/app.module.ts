@@ -28,6 +28,7 @@ import { SkillFilterComponent } from './views/market-view/skill-filter/skill-fil
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,8 +45,7 @@ import { SkillFilterComponent } from './views/market-view/skill-filter/skill-fil
     LineupComponent,
     MarketViewComponent,
     SkillFilterComponent,
-    
-   
+
   ],
   imports: [
     BrowserModule,
