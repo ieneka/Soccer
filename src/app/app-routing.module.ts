@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LandingViewComponent } from './views/landing-view/landing-view.component';
 import { TeamViewComponent } from './views/team-view/team-view/team-view.component';
 import { LineupComponent } from './views/lineup/lineup.component';
+import { MarketViewComponent } from './views/market-view/market-view.component';
 // import { SignUpComponent } from './views/landing-view/sign-up/sign-up.component';
 
 const routes: Routes = [
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: 'landing', component: LandingViewComponent },
   { path: 'team', component: TeamViewComponent },
   { path: 'line-up', component: LineupComponent },
+  { path: 'market-view', component: MarketViewComponent },
 ];
 
 @NgModule({

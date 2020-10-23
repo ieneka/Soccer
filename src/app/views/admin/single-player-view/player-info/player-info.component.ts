@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PlayerService } from './servicios/player.service';
+import { PlayerListService } from '../../../../services/player-list.service';
+
 
 @Component({
   selector: 'app-player-info',
@@ -12,13 +13,21 @@ export class PlayerInfoComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private _PlayerService: PlayerService
+    private playerListService: PlayerListService
   ) {
     this.activatedRoute.params.subscribe((params) => {
-      this.player = this._PlayerService.getPlayeri(params['id']);
-      console.log(this.player);
+      this.getPlayeri(params['id']);
     });
   }
 
   ngOnInit(): void {}
+
+  getPlayeri(id: string){
+    this.playerListService.getPlayeri(id).subscribe(
+      (data: any) => {
+        this.player = data;
+        console.log(this.player);
+      }
+    );
+      }
 }

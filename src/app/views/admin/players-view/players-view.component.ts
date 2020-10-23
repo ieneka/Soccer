@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PlayerService } from '../single-player-view/player-info/servicios/player.service';
+import { PlayerListService } from '../../../services/player-list.service';
 
 @Component({
   selector: 'app-players-view',
@@ -10,10 +10,27 @@ export class PlayersViewComponent implements OnInit {
   headers = ['Player Name', 'Team'];
   player: any = {};
 
-  constructor(private _PlayerService: PlayerService) {}
+  constructor(private playerListService: PlayerListService) {
+    this.playerListService.getPlayers().subscribe(
+      (data: any) => {
+        console.log(data);
+        this.player = data;
+        console.log(this.player);
+      }
+    );
+  }
 
   ngOnInit(): void {
-    this.player = this._PlayerService.getPlayer();
+    this.player = this.playerListService.getPlayers();
     console.log(this.player);
   }
+
+  deletePlayer(id: string){
+    const ok = confirm(`Está seguro que desea borrar a este jugador?`);
+    if (ok == true){
+      this.playerListService.deletePlayer( id ).subscribe();
+    }
+  }
+
 }
+
