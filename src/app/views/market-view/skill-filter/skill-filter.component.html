@@ -29,37 +29,61 @@
 
         <div class="row row-cols-1 row-cols-md-3  mt-5">
             <div class="col col-md-4">
-                <p>Attack (between 0 and 10)</p>
+                <p class="font-weight-bold d-flex justify-content-between">Attack <span>{{rangeAttack}}</span></p>
+                <hr>
                 <form>
-                    <input class="col slider" type="range" id="attack" name="attack" min="0" max="10">
+                    <input class="col slider mt-md-5" type="range" id="attack" name="attack" min="0" max="10" value="5" (input)="valueAttack($event)">
                 </form>
+                <div class="d-flex justify-content-between text-warning">
+                    <p>0</p>
+                    <p>10</p>
+                </div>
+
+
             </div>
             <div class="col col-md-4">
-                <p>Defense (between 0 and 10)</p>
+                <p class="font-weight-bold d-flex justify-content-between">Defense <span>{{rangeDefense}}</span>
+                </p>
+                <hr>
                 <form>
-                    <input class="col slider" type="range" id="defense" name="defense" min="0" max="10">
+                    <input class="col slider mt-md-5" type="range" id="defense" name="defense" min="0" max="10" value="5" (input)="valueDefense($event)">
                 </form>
+                <div class="d-flex justify-content-between text-warning">
+                    <p>0</p>
+                    <p>10</p>
+                </div>
             </div>
 
         </div>
 
         <div class="row row-cols-1 row-cols-md-3  mt-5">
             <div class="col col-md-4">
-                <p>Pass (between 0 and 10)</p>
+                <p class="font-weight-bold d-flex justify-content-between"> Pass <span>{{rangePass}}</span></p>
+                <hr>
                 <form>
-                    <input class="col slider" type="range" id="pass" name="pass" min="0" max="10">
+                    <input class="col slider mt-md-5" type="range" id="pass" name="pass" min="0" max="10" value="5" (input)="valuePass($event)">
                 </form>
+                <div class="d-flex justify-content-between text-warning">
+                    <p>0</p>
+                    <p>10</p>
+                </div>
             </div>
+
             <div class="col col-md-4">
-                <p>Keeper (between 0 and 10)</p>
+                <p class="font-weight-bold d-flex justify-content-between">Keeper <span>{{rangeKeeper}}</span></p>
+                <hr>
                 <form>
-                    <input class="col slider" type="range" id="defense" name="defense" min="0" max="10">
+                    <input class="col slider mt-md-5" type="range" id="defense" name="defense" min="0" max="10" value="5" (input)="valueKeeper($event)">
                 </form>
+                <div class="d-flex justify-content-between text-warning">
+                    <p>0</p>
+                    <p>10</p>
+                </div>
             </div>
 
 
             <div class="col col-md-3 my-5 my-md-0 d-flex align-items-md-end mx-md-auto">
-                <button type="button" class="btn btn-warning w-100 ">Search</button>
+                <button type="button" class="btn btn-warning w-100 mb-3">Search</button>
             </div>
         </div>
 
