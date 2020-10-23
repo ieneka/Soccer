@@ -5,50 +5,58 @@
         </div>
         <hr>
 
-        <div class="row row-cols-1 row-cols-md-3 justify-content-between ">
+        <div class="row row-cols-1 row-cols-md-3 form-inline pl-3">
 
-            <div class="col col-md-6">
-                <div class="form-group">
-                    <label for="max-age">Max-age</label>
-                    <select class="form-control" id="max-age">
-                              <option *ngFor="let year of maxYears">{{ year }}</option>
+
+            <div class="form-group col col-md-4 p-0 ">
+                <label class="font-weight-bold pr-5" for="max-age ">Max-age</label>
+                <select class="form-control col mr-3" id="max-age ">
+                              <option *ngFor="let year of maxYears ">{{ year }}</option>
                         </select>
-                </div>
             </div>
 
-            <div class="col col-md-6">
-                <div class="form-group">
-                    <label for="min-age">Min-age</label>
-                    <select class="form-control" id="min-age">
-                                <option *ngFor="let year of minYears">{{ year }}</option>
+
+            <div class="form-group col col-md-4 p-0">
+
+                <label class="font-weight-bold pr-5" for="min-age ">Min-age</label>
+                <select class="form-control col mr-3" id="min-age ">
+                                <option *ngFor="let year of minYears ">{{ year }}</option>
                           </select>
-                </div>
             </div>
+
+            <div class="col col-md-8 p-0">
+                <hr>
+            </div>
+
+
         </div>
 
 
-        <div class="row row-cols-1 row-cols-md-3  mt-5">
-            <div class="col col-md-4">
-                <p class="font-weight-bold d-flex justify-content-between">Attack <span>{{rangeAttack}}</span></p>
+
+
+
+        <div class="row row-cols-1 row-cols-md-3 mt-5 ">
+            <div class="col col-md-4 ">
+                <p class="font-weight-bold d-flex justify-content-between ">Attack <span>{{rangeAttack}}</span></p>
                 <hr>
                 <form>
-                    <input class="col slider mt-md-5" type="range" id="attack" name="attack" min="0" max="10" value="5" (input)="valueAttack($event)">
+                    <input class="col slider mt-md-5 " type="range " id="attack " name="attack " min="0 " max="10 " value="5 " (input)="valueAttack($event) ">
                 </form>
-                <div class="d-flex justify-content-between text-warning">
+                <div class="d-flex justify-content-between text-warning ">
                     <p>0</p>
                     <p>10</p>
                 </div>
 
 
             </div>
-            <div class="col col-md-4">
-                <p class="font-weight-bold d-flex justify-content-between">Defense <span>{{rangeDefense}}</span>
+            <div class="col col-md-4 ">
+                <p class="font-weight-bold d-flex justify-content-between ">Defense <span>{{rangeDefense}}</span>
                 </p>
                 <hr>
                 <form>
-                    <input class="col slider mt-md-5" type="range" id="defense" name="defense" min="0" max="10" value="5" (input)="valueDefense($event)">
+                    <input class="col slider mt-md-5 " type="range " id="defense " name="defense " min="0 " max="10 " value="5 " (input)="valueDefense($event) ">
                 </form>
-                <div class="d-flex justify-content-between text-warning">
+                <div class="d-flex justify-content-between text-warning ">
                     <p>0</p>
                     <p>10</p>
                 </div>
@@ -56,34 +64,34 @@
 
         </div>
 
-        <div class="row row-cols-1 row-cols-md-3  mt-5">
-            <div class="col col-md-4">
-                <p class="font-weight-bold d-flex justify-content-between"> Pass <span>{{rangePass}}</span></p>
+        <div class="row row-cols-1 row-cols-md-3 mt-5 ">
+            <div class="col col-md-4 ">
+                <p class="font-weight-bold d-flex justify-content-between "> Pass <span>{{rangePass}}</span></p>
                 <hr>
                 <form>
-                    <input class="col slider mt-md-5" type="range" id="pass" name="pass" min="0" max="10" value="5" (input)="valuePass($event)">
+                    <input class="col slider mt-md-5 " type="range " id="pass " name="pass " min="0 " max="10 " value="5 " (input)="valuePass($event) ">
                 </form>
-                <div class="d-flex justify-content-between text-warning">
+                <div class="d-flex justify-content-between text-warning ">
                     <p>0</p>
                     <p>10</p>
                 </div>
             </div>
 
-            <div class="col col-md-4">
-                <p class="font-weight-bold d-flex justify-content-between">Keeper <span>{{rangeKeeper}}</span></p>
+            <div class="col col-md-4 ">
+                <p class="font-weight-bold d-flex justify-content-between ">Keeper <span>{{rangeKeeper}}</span></p>
                 <hr>
                 <form>
-                    <input class="col slider mt-md-5" type="range" id="defense" name="defense" min="0" max="10" value="5" (input)="valueKeeper($event)">
+                    <input class="col slider mt-md-5 " type="range " id="defense " name="defense " min="0 " max="10 " value="5 " (input)="valueKeeper($event) ">
                 </form>
-                <div class="d-flex justify-content-between text-warning">
+                <div class="d-flex justify-content-between text-warning ">
                     <p>0</p>
                     <p>10</p>
                 </div>
             </div>
 
 
-            <div class="col col-md-3 my-5 my-md-0 d-flex align-items-md-end mx-md-auto">
-                <button type="button" class="btn btn-warning w-100 mb-3">Search</button>
+            <div class="col col-md-3 my-5 my-md-0 d-flex align-items-md-end mx-md-auto ">
+                <button type="button " class="btn btn-warning w-100 mb-3 ">Search</button>
             </div>
         </div>
 
