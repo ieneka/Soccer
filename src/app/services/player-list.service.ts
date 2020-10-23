@@ -20,7 +20,7 @@ export class PlayerListService {
 
   getPlayers(){
     return this.http.get(`${this.url}/players`)
-          .pipe(map(data => data['all players']))
+          .pipe(map(data => data['all players']));
   }
 
   getPlayeri(id: string) {
