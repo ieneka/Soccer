@@ -3,6 +3,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { LoginService } from '../../../services/login.service';
 import { LoginI } from '../../../modules/login.interface';
 import { UsersI } from '../../../modules/users.interface';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-landing-header',
@@ -11,8 +13,7 @@ import { UsersI } from '../../../modules/users.interface';
 })
 
 export class LandingHeaderComponent implements OnInit {
- users: UsersI[];
-  constructor( private login: LoginService) { }
+  constructor( private login: LoginService, private router: Router) { }
 
   email: string;
   password: string;
@@ -26,11 +27,18 @@ export class LandingHeaderComponent implements OnInit {
   ngOnInit(){
   }
 
-
-  onLogin(resultado: LoginI){
-    this.login.onLogin(resultado).subscribe(data => {
-      console.log(data);
-    });
+  onLogin(form: LoginI){
+    localStorage.clear();
+    this.login.onLoginUser(form).subscribe(data => {
+      this.login.setUser(data);
+      if (localStorage.getItem('currentUser').includes('type_user')){
+        this.router.navigate(['/team']);
+      }else{
+        this.resultado = 'El usuario no existe';
+      }
+    },
+    error => console.log(error)
+    );
   }
 
   /*
@@ -40,7 +48,6 @@ export class LandingHeaderComponent implements OnInit {
   processForm() {
     if (this.formularioLogin.valid) {
       this.onLogin(this.formularioLogin.value);
-      console.log(this.formularioLogin.value);
     } else {
       this.resultado = 'Hay datos inválidos en el formulario';
     }
