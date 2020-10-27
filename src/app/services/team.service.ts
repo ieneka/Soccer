@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { TeamI } from '../modules/team.interface';
-import { isNullOrUndefined } from 'util';
 import { UsersI } from '../modules/users.interface';
+import { BestPlayersI } from '../modules/bestPlayers.interface';
+import { PlayersI } from '../modules/playersTeam.interface';
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -32,14 +33,14 @@ export class TeamService {
     return id;
   }
 
-
-  /* getStats(id): Observable<StatsI>{
-    const urlApi = 'http://217.76.158.200:8181/api/team/' + id + '/stats';
-    return this.http.get<StatsI>(urlApi);
+  getBestPlayers(id): Observable<BestPlayersI>{
+    const urlApi = 'http://217.76.158.200:8181/api/teams/' + id + '/bests';
+    return this.http.get<BestPlayersI>(urlApi);
   }
 
-  getBestPlayers(id): Observable<BestPlayersI>{
-    const urlApi = 'http://217.76.158.200:8181/api/team/' + id + '/bests';
-  } */
+  getPlayers(id): Observable<PlayersI>{
+    const urlApi = 'http://217.76.158.200:8181/api/players/teams/' + id;
+    return this.http.get<PlayersI>(urlApi);
+  }
 
 }

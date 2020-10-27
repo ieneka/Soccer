@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TeamService } from '../../../../services/team.service';
 import { TeamI } from '../../../../modules/team.interface';
+import { PlayersI } from '../../../../modules/playersTeam.interface';
 import { CompileTemplateMetadata } from '@angular/compiler';
 
 @Component({
@@ -12,6 +13,7 @@ export class TeamInfoComponent implements OnInit {
   constructor(private team: TeamService) {}
 
   teamData: TeamI;
+  playersTeam;
 
   name;
   foundationDate;
@@ -22,6 +24,9 @@ export class TeamInfoComponent implements OnInit {
       this.teamData = data['team'];
       this.name = this.teamData.name;
       this.foundationDate = this.teamData.foundation_date;
+    });
+    this.team.getPlayers(id).subscribe(data =>{
+      this.playersTeam = data['all players by team id'].length;
     });
   }
 }
