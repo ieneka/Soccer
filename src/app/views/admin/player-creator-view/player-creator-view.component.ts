@@ -36,10 +36,11 @@ export class PlayerCreatorViewComponent implements OnInit {
     }
 
     if ( this.player.id ){
-
+      const ok = confirm(`Are you sure you want to modificate this player?`);
+      if (ok === true){
           this.playerListService.updatePlayer( this.player ).subscribe(resp => {
             console.log(resp);
-          });
+          });}
 
 
     }else{
