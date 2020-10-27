@@ -34,7 +34,7 @@ export class SinglePlayerViewComponent implements OnInit {
   deletePlayer(id: string){
     const ok = confirm(`Are you sure you want to delete ${this.player.name}?`)
     if (ok === true){
-      this.playerListService.deletePlayer( this.player.id ).subscribe();
+      this.playerListService.deletePlayer( id ).subscribe();
       this.route.navigate(['/admin/players']);
     }
   }
