@@ -40,7 +40,8 @@ export class PlayerCreatorViewComponent implements OnInit {
       if (ok === true){
           this.playerListService.updatePlayer( this.player ).subscribe(resp => {
             console.log(resp);
-          });}
+          });
+        }
 
 
     }else{

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PlayerListService } from '../../../services/player-list.service';
 
 
@@ -22,11 +22,12 @@ export class PlayersViewComponent implements OnInit {
   }
 
   public onPageChange(pageNum: number): void {
-    this.pageSize = this.itemsPerPage* (pageNum - 1);
+    this.pageSize = this.itemsPerPage * (pageNum - 1);
   }
 
   public changePagesize(num: number): void {
-  this.itemsPerPage = this.pageSize + num;}
+  this.itemsPerPage = this.pageSize + num;
+}
 
   ngOnInit(): void {
     this.getAllPlayers();
