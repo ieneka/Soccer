@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { LoginService } from '../../../services/login.service';
+import { LoginI } from '../../../modules/login.interface';
+import { UsersI } from '../../../modules/users.interface';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-landing-header',
@@ -8,32 +13,43 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 
 export class LandingHeaderComponent implements OnInit {
+  constructor( private login: LoginService, private router: Router) { }
 
-  username: string;
+  email: string;
   password: string;
   resultado: string;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
   formularioLogin = new FormGroup({
-    username: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required]),
   });
 
-  /**
+  ngOnInit(){
+  }
+
+  onLogin(form: LoginI){
+    localStorage.clear();
+    this.login.onLoginUser(form).subscribe(data => {
+      this.login.setUser(data);
+      if (localStorage.getItem('currentUser').includes('type_user')){
+        this.router.navigate(['/team']);
+      }else{
+        this.resultado = 'El usuario no existe';
+      }
+    },
+    error => console.log(error)
+    );
+  }
+
+  /*
    * Process the form we have. Send to whatever backend
    * Only alerting for now
    */
   processForm() {
     if (this.formularioLogin.valid) {
-      const allInfo = `Username: ${this.username}. Pwd: ${this.password}.`;
-      this.resultado = allInfo; 
+      this.onLogin(this.formularioLogin.value);
     } else {
-      this.resultado = "Hay datos inválidos en el formulario";
+      this.resultado = 'Hay datos inválidos en el formulario';
     }
   }
-
 }

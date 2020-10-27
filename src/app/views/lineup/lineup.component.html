@@ -116,7 +116,7 @@
                     [cdkDropListConnectedTo]="[playersList, goalKeppersList, defendersList, midfiledersList, forwardersList]"
                     (cdkDropListDropped)="onDrop($event)" [cdkDropListEnterPredicate]="limiterPredicate">
 
-                    <div class="card bg-light p-1 m-1" *ngFor="let forwarder of forwarders" cdkDrag>
+                    <div class="card  p-1 m-1" *ngFor="let forwarder of forwarders" cdkDrag>
                         <div class="card-body p-1 d-flex flex-row">
                             <div class="imgcontainer">
                                 <img [src]="forwarder.img" alt="forwarder.img" class="cirlceImage" />
@@ -128,13 +128,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
             </div>
         </div>
     </div>
@@ -148,17 +141,17 @@
         <div class="row team">
             <h5 class="text-center mt-3 ml-5 ">Players:</h5>
         </div>
-        <div class="col-12">
+        <div class="col-12 ">
             <div class="row mb-5 justify-content-center" cdkDropList #playersList="cdkDropList" [cdkDropListData]="players"
                 [cdkDropListConnectedTo]="[playersList, goalKeppersList, defendersList, midfiledersList, forwardersList]"
                 (cdkDropListDropped)="onDrop($event)">
 
-                <div class="card bg-light p-1 m-1" *ngFor="let player of players" cdkDrag>
+                <div id="player" class="card bg-light p-1 m-1" *ngFor="let player of players" cdkDrag>
                     <div class="card-body p-1 d-flex flex-row">
                         <div class="imgcontainer">
                             <img [src]="player.img" alt="player.img" class="cirlceImage" />
                         </div>
-                        <div id="card-player" class="ml-1 d-flex flex-column justify-content-start">
+                        <div id="card-player" class="ml-1 d-flex flex-column ">
                             <p class="p-0">{{ player.name }}</p>
                             <small class="p-0">{{ player.category }}</small>
                         </div>

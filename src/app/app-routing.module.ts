@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'landing', component: LandingViewComponent },
   { path: 'team', component: TeamViewComponent },
   { path: 'line-up', component: LineupComponent },
-  { path: 'market-view', component: MarketViewComponent },
+  { path: 'market', component: MarketViewComponent },
 ];
 
 @NgModule({
