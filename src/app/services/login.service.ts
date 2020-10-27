@@ -52,4 +52,8 @@ export class LoginService {
     }
   }
 
+  logoutUser(){
+    localStorage.clear();
+  }
+
 }
