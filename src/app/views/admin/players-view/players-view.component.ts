@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { PlayerListService } from '../../../services/player-list.service';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-players-view',
@@ -9,8 +11,18 @@ import { PlayerListService } from '../../../services/player-list.service';
 export class PlayersViewComponent implements OnInit {
   headers = ['Player Name', 'Team'];
   player: any = {};
+  playersData: any;
 
-  constructor(private playerListService: PlayerListService) {
+
+  constructor(public playerListService: PlayerListService) {
+    this.player = [];
+  }
+
+  ngOnInit(): void {
+    this.getAllPlayers();
+  }
+
+  getAllPlayers(){
     this.playerListService.getPlayers().subscribe(
       (data: any) => {
         console.log(data);
@@ -20,15 +32,12 @@ export class PlayersViewComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void {
-    this.player = this.playerListService.getPlayers();
-    console.log(this.player);
-  }
-
   deletePlayer(id: string){
     const ok = confirm(`Are you sure you want to delete this player?`);
-    if (ok == true){
-      this.playerListService.deletePlayer( id ).subscribe();
+    if (ok === true){
+      this.playerListService.deletePlayer( id ).subscribe(response => {
+        this.getAllPlayers();
+      });
     }
   }
 

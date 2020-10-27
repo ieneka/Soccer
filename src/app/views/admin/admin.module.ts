@@ -19,6 +19,10 @@ import { PlayerCreatorViewComponent } from './player-creator-view/player-creator
 // pipes
 import { NoimagePipe } from '../../pipes/noimage.pipe';
 
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -41,6 +45,9 @@ import { NoimagePipe } from '../../pipes/noimage.pipe';
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
+    MatPaginatorModule,
+    MatTableModule,
+    BrowserAnimationsModule,
   ],
 })
 export class AdminModule {}

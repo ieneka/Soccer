@@ -20,15 +20,14 @@ export class PlayerCreatorViewComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
 
     if ( id !== 'new' ) {
-
       this.playerListService.getPlayeri( id )
         .subscribe( (resp: PlayerModel) => {
           this.player = resp;
           this.player.id = id;
         });
-
     }
   }
+
 
   save(form: NgForm){
     if (form.invalid) {
@@ -36,10 +35,18 @@ export class PlayerCreatorViewComponent implements OnInit {
       return;
     }
 
-    if( this.player.id ){
-      this.playerListService.updatePlayer( this.player).subscribe(resp => {
-        console.log(resp);
-      });
+    if ( this.player.id ){
+      console.log(this.player.id);
+      this.playerListService.getPlayeri(this.player.id).subscribe(
+        (data: any) => {
+          this.player = data;
+          console.log(this.player);
+          this.playerListService.updatePlayer( this.player ).subscribe(resp => {
+            console.log(resp);
+          });
+        }
+      );
+
     }else{
       this.playerListService.newPlayer( this.player).subscribe(resp => {
         console.log(resp);

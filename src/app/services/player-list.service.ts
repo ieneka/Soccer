@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { map, tap, catchError } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { of } from 'rxjs';
 import { PlayerModel } from '../modules/player-model';
 
 
@@ -14,7 +16,7 @@ export class PlayerListService {
 
   constructor( private http: HttpClient) { }
 
-  deletePlayer( id: string){
+  deletePlayer( id: string): Observable<any>{
     return this.http.delete(`${this.url}/players/${id}`);
   }
 
@@ -36,11 +38,10 @@ export class PlayerListService {
           }));
   }
 
-  updatePlayer(player: PlayerModel){
 
-    return this.http.put(`${this.url}/players/${player.id}`, player);
+  updatePlayer(player: PlayerModel): Observable<any>{
 
+    return this.http.put(`${this.url}/players`, player);
   }
+
 }
-
-

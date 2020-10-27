@@ -2,6 +2,7 @@
     <div class="row justify-content-center mt-5">
         <div class="col-8">
             <table class="table table-hover table-light">
+
                 <thead>
                     <tr class="h3">
                         <th *ngFor="let head of headers">
@@ -24,6 +25,8 @@
                         </td>
                     </tr>
                 </tbody>
+                <tr mat-header-row *matHeaderRowDef="headers"></tr>
+                <tr mat-row *matRowDef="let row; columns: headers;"></tr>
             </table>
         </div>
         <div class="col-2">
