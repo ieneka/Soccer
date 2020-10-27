@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { PlayerListService } from '../../../services/player-list.service';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
+
 
 @Component({
   selector: 'app-players-view',
@@ -12,11 +11,22 @@ export class PlayersViewComponent implements OnInit {
   headers = ['Player Name', 'Team'];
   player: any = {};
   playersData: any;
+  // pagination
+  currentPage = 1;
+  itemsPerPage = 5;
+  pageSize: number;
 
 
   constructor(public playerListService: PlayerListService) {
     this.player = [];
   }
+
+  public onPageChange(pageNum: number): void {
+    this.pageSize = this.itemsPerPage* (pageNum - 1);
+  }
+
+  public changePagesize(num: number): void {
+  this.itemsPerPage = this.pageSize + num;}
 
   ngOnInit(): void {
     this.getAllPlayers();

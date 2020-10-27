@@ -39,9 +39,9 @@ export class PlayerListService {
   }
 
 
-  updatePlayer(player: PlayerModel): Observable<any>{
+  updatePlayer( player: PlayerModel): Observable<any>{
 
-    return this.http.put(`${this.url}/players`, player);
+    return this.http.put(`${this.url}/players`, player );
   }
 
 }
