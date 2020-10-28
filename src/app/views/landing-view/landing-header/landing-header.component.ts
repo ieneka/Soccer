@@ -31,10 +31,11 @@ export class LandingHeaderComponent implements OnInit {
     localStorage.clear();
     this.login.onLoginUser(form).subscribe(data => {
       this.login.setUser(data);
+
       if (localStorage.getItem('currentUser').includes('type_user')){
-        this.router.navigate(['/team']);
+        this.router.navigate(['/team/']);
       }else{
-        this.resultado = 'El usuario no existe';
+        this.resultado = 'Oops! the email / password is not correct';
       }
     },
     error => console.log(error)
@@ -49,7 +50,7 @@ export class LandingHeaderComponent implements OnInit {
     if (this.formularioLogin.valid) {
       this.onLogin(this.formularioLogin.value);
     } else {
-      this.resultado = 'Hay datos inválidos en el formulario';
+      this.resultado = 'Oops! The fields are required';
     }
   }
 }

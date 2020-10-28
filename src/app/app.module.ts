@@ -48,12 +48,8 @@ import { CountdownComponent } from './views/market-view/countdown/countdown.comp
     LineupComponent,
     MarketViewComponent,
     SkillFilterComponent,
-<<<<<<< HEAD
-
-=======
     MarketPlayersComponent,
     CountdownComponent,
->>>>>>> 4b2b84711773d944b2b17ebb9fc3fa5d650d6eec
   ],
   imports: [
     BrowserModule,
