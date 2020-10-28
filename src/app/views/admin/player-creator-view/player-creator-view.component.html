@@ -4,7 +4,7 @@
         <div class="col">
             <button class="btn btn-warning" routerLink="/admin/players">
         <i class="fa fa-arrow-left"></i>
-        Regresar
+        Back
       </button>
         </div>
     </div>
@@ -16,7 +16,7 @@
             <div class="col">
                 <h3 class="text-center mt-4">Player Creator</h3>
 
-                <form (ngSubmit)="guardar( f )" #f="ngForm">
+                <form (ngSubmit)="save( f )" #f="ngForm">
 
                     <div class="form-group">
                         <label>ID</label>
@@ -25,12 +25,12 @@
                     </div>
 
 
-                    <div class="form-group" *ngIf="!player.id">
+                    <div class="form-group">
                         <label>Name</label>
                         <input type="text" class="form-control" placeholder="Player's name" [(ngModel)]="player.name" name="name" required>
                     </div>
 
-                    <div class="form-group" *ngIf="!player.id">
+                    <div class="form-group">
                         <label>Age</label>
                         <input type="text" class="form-control" [(ngModel)]="player.age" name="age" placeholder="Player's age">
                     </div>
@@ -38,27 +38,30 @@
                         <label>AKA</label>
                         <input type="text" class="form-control" [(ngModel)]="player.aka" name="AKA" placeholder="Player's AKA">
                     </div>
-                    <div class="form-group" *ngIf="!player.id">
+                    <div class="form-group">
                         <label>Image</label>
-                        <input type="file" class="form-control-file" [(ngModel)]="player.img" name="img">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" [(ngModel)]="player.img" name="img">
+                            <label class="custom-file-label">Choose file</label>
+                        </div>
                     </div>
-                    <div class="form-group" *ngIf="!player.id">
+                    <div class="form-group">
                         <label>Team</label>
                         <input type="text" class="form-control" [(ngModel)]="player.team_id" name="team_id" placeholder="Player's team">
                     </div>
-                    <div class="form-group" *ngIf="!player.id">
+                    <div class="form-group">
                         <label>Keeper</label>
                         <input type="range" class="form-control-range" [(ngModel)]="player.keeper" name="poder" min="0" max="10">
                     </div>
-                    <div class="form-group" *ngIf="!player.id">
+                    <div class="form-group">
                         <label>Defense</label>
                         <input type="range" class="form-control-range" [(ngModel)]="player.defense" name="defense" min="0" max="10">
                     </div>
-                    <div class="form-group" *ngIf="!player.id">
+                    <div class="form-group">
                         <label>Passing</label>
                         <input type="range" class="form-control-range" [(ngModel)]="player.pass" name="passing" min="0" max="10">
                     </div>
-                    <div class="form-group" *ngIf="!player.id">
+                    <div class="form-group">
                         <label>Attack</label>
                         <input type="range" class="form-control-range" [(ngModel)]="player.attack" name="attack" min="0" max="10">
                     </div>

@@ -24,6 +24,10 @@ import {MatCardModule} from '@angular/material/card';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { MarketViewComponent } from './views/market-view/market-view.component';
 import { SkillFilterComponent } from './views/market-view/skill-filter/skill-filter.component';
+import { MarketPlayersComponent } from './views/market-view/market-players/market-players.component';
+import { CountdownComponent } from './views/market-view/countdown/countdown.component';
+
+
 
 
 
@@ -44,8 +48,8 @@ import { SkillFilterComponent } from './views/market-view/skill-filter/skill-fil
     LineupComponent,
     MarketViewComponent,
     SkillFilterComponent,
-    
-   
+    MarketPlayersComponent,
+    CountdownComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,8 +62,7 @@ import { SkillFilterComponent } from './views/market-view/skill-filter/skill-fil
     TeamViewModule,
     MatCardModule,
     DragDropModule,
-    
-    
+
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent],
