@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersI } from 'src/app/modules/users.interface';
+import { LoginService } from '../../services/login.service';
+
 
 @Component({
   selector: 'app-header',
@@ -7,10 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   avatar = 'assets/icons/user.png';
-  admin = true;
-  player = false;
+  admin;
+  manager;
+  email;
+  typeUser;
 
-  constructor() {}
+  constructor(private login: LoginService) {}
+  user: UsersI;
+  ngOnInit(){
+   this.user = this.login.getCurrentUser();
+   this.typeUser = this.user.type_user;
+   if (this.typeUser === 'MANAGER'){
+    this.manager = true;
+    this.admin = false;
+   }else{
+     this.manager = false;
+     this.admin = true;
+   }
 
-  ngOnInit(): void {}
+  }
+
+
 }

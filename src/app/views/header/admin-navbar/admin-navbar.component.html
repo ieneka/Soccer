@@ -1,3 +1,4 @@
+
 <ul class="navbar-nav navbar-dark pt-1">
     <li class="nav-item  pr-3 mr-3">
         <a [routerLink]="['/admin/players']" class="nav-link">Players</a>
@@ -12,15 +13,30 @@
 
 
 <ul class="navbar-nav navbar-dark pt-1">
-
-
     <li class="nav-item pl-lg-5">
-        <p class="user-name mt-2 mr-5"> <img class="mr-2" src="assets/icons/user.png" width="24" height="24" alt="Avatar" /> Username
+        <p class="user-name mt-2 mr-5"> <img class="mr-2" src="assets/icons/user.png" width="24" height="24" alt="Avatar" /> {{email}}
         </p>
     </li>
-
-    <li> <button class="btn btn btn-warning">Logout</button></li>
-
-
-
+    <!-- Button trigger modal -->
+    <li> <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+        Logout
+      </button></li>
 </ul>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-dark text-center mt-4 ml-2" id="exampleModalLabel">Do you want to close session? </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+          <button type="button" onclick="logout()" class="btn btn-warning">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
