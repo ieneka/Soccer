@@ -17,5 +17,8 @@ export class NavbarComponent implements OnInit {
     this.user = this.login.getCurrentUser();
     this.email = this.user.email;
   }
+  logout(){
+    this.login.logoutUser();
+  }
 
 }

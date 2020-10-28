@@ -50,7 +50,7 @@ export class LoginService {
 
   logoutUser(){
     localStorage.clear();
-    this.router.navigate(['http://localhost:4200/']);
+    this.router.navigate(['landing']);
   }
 
 }
