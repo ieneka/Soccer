@@ -31,6 +31,7 @@ import { CountdownComponent } from './views/market-view/countdown/countdown.comp
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

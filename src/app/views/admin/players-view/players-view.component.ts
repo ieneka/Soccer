@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayerListService } from '../../../services/player-list.service';
 
+
 @Component({
   selector: 'app-players-view',
   templateUrl: './players-view.component.html',
@@ -9,8 +10,30 @@ import { PlayerListService } from '../../../services/player-list.service';
 export class PlayersViewComponent implements OnInit {
   headers = ['Player Name', 'Team'];
   player: any = {};
+  playersData: any;
+  // pagination
+  currentPage = 1;
+  itemsPerPage = 5;
+  pageSize: number;
 
-  constructor(private playerListService: PlayerListService) {
+
+  constructor(public playerListService: PlayerListService) {
+    this.player = [];
+  }
+
+  public onPageChange(pageNum: number): void {
+    this.pageSize = this.itemsPerPage * (pageNum - 1);
+  }
+
+  public changePagesize(num: number): void {
+  this.itemsPerPage = this.pageSize + num;
+}
+
+  ngOnInit(): void {
+    this.getAllPlayers();
+  }
+
+  getAllPlayers(){
     this.playerListService.getPlayers().subscribe(
       (data: any) => {
         console.log(data);
@@ -20,15 +43,12 @@ export class PlayersViewComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void {
-    this.player = this.playerListService.getPlayers();
-    console.log(this.player);
-  }
-
   deletePlayer(id: string){
-    const ok = confirm(`Está seguro que desea borrar a este jugador?`);
-    if (ok == true){
-      this.playerListService.deletePlayer( id ).subscribe();
+    const ok = confirm(`Are you sure you want to delete this player?`);
+    if (ok === true){
+      this.playerListService.deletePlayer( id ).subscribe(response => {
+        this.getAllPlayers();
+      });
     }
   }
 

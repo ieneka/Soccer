@@ -20,26 +20,30 @@ export class PlayerCreatorViewComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
 
     if ( id !== 'new' ) {
-
       this.playerListService.getPlayeri( id )
         .subscribe( (resp: PlayerModel) => {
           this.player = resp;
           this.player.id = id;
         });
-
     }
   }
 
-  guardar(form: NgForm){
+
+  save(form: NgForm){
     if (form.invalid) {
       console.log('formulario invalido');
       return;
     }
 
-    if( this.player.id ){
-      this.playerListService.updatePlayer( this.player).subscribe(resp => {
-        console.log(resp);
-      });
+    if ( this.player.id ){
+      const ok = confirm(`Are you sure you want to modificate this player?`);
+      if (ok === true){
+          this.playerListService.updatePlayer( this.player ).subscribe(resp => {
+            console.log(resp);
+          });
+        }
+
+
     }else{
       this.playerListService.newPlayer( this.player).subscribe(resp => {
         console.log(resp);

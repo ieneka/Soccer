@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PlayerListService } from '../../../services/player-list.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-single-player-view',
@@ -12,7 +13,8 @@ export class SinglePlayerViewComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private playerListService: PlayerListService
+    private playerListService: PlayerListService,
+    private route: Router
   ) {
     this.activatedRoute.params.subscribe((params) => {
       this.getPlayeri(params['id']);
@@ -30,10 +32,10 @@ export class SinglePlayerViewComponent implements OnInit {
     );
       }
   deletePlayer(id: string){
-    const ok = confirm(`Está seguro que desea borrar a ${this.player.name}?`)
-    if(ok == true){
+    const ok = confirm(`Are you sure you want to delete ${this.player.name}?`)
+    if (ok === true){
       this.playerListService.deletePlayer( id ).subscribe();
+      this.route.navigate(['/admin/players']);
     }
-    
   }
 }
