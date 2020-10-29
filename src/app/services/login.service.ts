@@ -5,6 +5,7 @@ import { LoginI } from '../modules/login.interface';
 import { UsersI } from '../modules/users.interface';
 import { map } from 'rxjs/operators';
 import { isNullOrUndefined } from 'util';
+import { Router } from '@angular/router';
 
 
 
@@ -17,7 +18,7 @@ export class LoginService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
     console.log('service ready');
   }
 
@@ -42,18 +43,14 @@ export class LoginService {
   }
 
   getCurrentUser(){
-    const userString = localStorage.getItem('currentUser');
-    // tslint:disable-next-line: deprecation
-    if (isNullOrUndefined(userString)) {
-      const user = JSON.parse(userString);
-      return user;
-    }else {
-      return null;
-    }
+    const currentUser = localStorage.getItem('currentUser');
+    const user = JSON.parse(currentUser);
+    return user;
   }
 
   logoutUser(){
     localStorage.clear();
+    this.router.navigate(['landing']);
   }
 
 }

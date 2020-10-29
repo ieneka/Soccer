@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../../../services/login.service';
+import { UsersI } from '../../../modules/users.interface';
 
 @Component({
   selector: 'app-admin-navbar',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminNavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private login: LoginService) { }
+  user: UsersI;
+  email;
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.user = this.login.getCurrentUser();
+    this.email = this.user.email;
   }
+  logout(){
+    this.login.logoutUser();
+  }
+
 
 }
