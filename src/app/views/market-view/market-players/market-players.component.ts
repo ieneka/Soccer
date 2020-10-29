@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SkillFilterComponent } from '../skill-filter/skill-filter.component';
 
 
 @Component({
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./market-players.component.css']
 })
 export class MarketPlayersComponent implements OnInit {
+  players;
+  constructor( ) {
 
-
-  constructor() {
    }
 
   ngOnInit(): void {
