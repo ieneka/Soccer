@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { PlayerListService } from '../../../services/player-list.service';
+import { MarketPlayersService } from '../../../services/market-players.service';
+
 
 @Component({
   selector: 'app-skill-filter',
@@ -24,7 +25,7 @@ export class SkillFilterComponent implements OnInit {
 
 
   constructor( private http: HttpClient,
-               private filter: PlayerListService ) {
+               private filter: MarketPlayersService ) {
 
     this.minYears = new Array ( 100 ).fill( 0 ).map( (x, i) => i + 1);
     this.maxYears = new Array ( 100 ).fill( 0 ).map( (x, i) => 100 - i - 1);

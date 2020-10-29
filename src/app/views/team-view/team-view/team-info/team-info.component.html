@@ -1,21 +1,23 @@
+<div class=" text-center mt-3">
+    <h3 class="team mt-5">Your Team</h3>
+</div>
 <div class="container">
-    <div class="card bg-light justify-content-center text-dark">
-        <h1 class="pt-5 px-5 ">IT Academy Team</h1>
+    <div class=" card bg-light justify-content-center text-dark">
+        <h1 class="pt-5 px-5 ">{{name}}</h1>
         <hr>
         <div class="px-5">
-            <p><span>Foundation Date:</span> 1990</p>
+            <p><span>Foundation Date:</span>{{foundationDate}}</p>
             <p><span>Manager:</span> John Doe</p>
-            <p> <span> Number of Player: </span> 20</p>
+            <p> <span> Number of Player: </span> {{playersTeam}}</p>
         </div>
 
         <hr>
         <div class="px-5">
             <p> <span>Last Five Results: </span></p>
-
             <app-last-five-results></app-last-five-results>
         </div>
-        <hr>
-        <app-best-players-layout class="my-3"></app-best-players-layout>
     </div>
-
+</div>
+<div class="container align-items-start d-md-none d-sm-block mt-1 text-dark">
+    <app-best-players-layout class="my-3"></app-best-players-layout>
 </div>

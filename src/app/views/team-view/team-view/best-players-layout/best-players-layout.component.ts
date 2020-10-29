@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TeamService } from '../../../../services/team.service';
+import { BestPlayersI } from '../../../../modules/bestPlayers.interface';
 
 @Component({
   selector: 'app-best-players-layout',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BestPlayersLayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private team: TeamService) { }
 
-  ngOnInit(): void {
+  bestPlayers: BestPlayersI;
+  defender;
+  keeper;
+  passer;
+  shooter;
+
+  ngOnInit() {
+    const id = this.team.getCurrentId();
+    this.team.getBestPlayers(id).subscribe(data => {
+      this.bestPlayers = data;
+      this.defender = data['defender:'];
+      this.keeper = data['keeper:'];
+      this.passer = data['passer:'];
+      this.shooter = data['shooter:'];
+    });
   }
 
 }
