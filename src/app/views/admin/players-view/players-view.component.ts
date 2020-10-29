@@ -13,12 +13,15 @@ export class PlayersViewComponent implements OnInit {
   playersData: any;
   // pagination
   currentPage = 1;
-  itemsPerPage = 5;
+  itemsPerPage = 6;
   pageSize: number;
+  // error api
+  error: boolean;
 
 
   constructor(public playerListService: PlayerListService) {
     this.player = [];
+    this.error = false;
   }
 
   public onPageChange(pageNum: number): void {
@@ -48,6 +51,9 @@ export class PlayersViewComponent implements OnInit {
     if (ok === true){
       this.playerListService.deletePlayer( id ).subscribe(response => {
         this.getAllPlayers();
+      }, ( errorService) => {
+        this.error = true;
+        console.log(errorService);
       });
     }
   }
