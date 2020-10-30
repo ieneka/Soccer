@@ -19,13 +19,14 @@ export class SkillFilterComponent implements OnInit {
   defense = 5;
   pass = 5;
   keeper = 5;
+  limitDate;
 
   players: any[] = [];
 
 
 
   constructor( private http: HttpClient,
-               private filter: MarketPlayersService ) {
+               private filter: MarketPlayersService) {
 
     this.minYears = new Array ( 100 ).fill( 0 ).map( (x, i) => i + 1);
     this.maxYears = new Array ( 100 ).fill( 0 ).map( (x, i) => 100 - i - 1);
@@ -60,9 +61,9 @@ export class SkillFilterComponent implements OnInit {
     this.minage = minAge;
   }
 
-  setAttack( attack: number) {
-    this.attack = attack;
-  }
+  // setAttack( attack: number) {
+  //   this.attack = attack;
+  // }
 
   search(maxAge, minAge, defense, attack, keeper, pass){
     console.log('search',maxAge, minAge, defense, attack, keeper, pass);
@@ -76,6 +77,7 @@ export class SkillFilterComponent implements OnInit {
       this.players = data;
       console.log('search data', this.players);
     });
+
     }
 
 }
