@@ -66,7 +66,7 @@ export class SkillFilterComponent implements OnInit {
   // }
 
   search(maxAge, minAge, defense, attack, keeper, pass){
-    console.log('search',maxAge, minAge, defense, attack, keeper, pass);
+    console.log('search', maxAge, minAge, defense, attack, keeper, pass);
     defense = this.defense;
     keeper = this.keeper;
     pass = this.pass;

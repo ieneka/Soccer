@@ -5,7 +5,7 @@
         </div>
         <hr>
 
-        <div class="row row-cols-1 row-cols-md-3 form-inline pl-3">
+        <div class="row row-cols-1 row-cols-md-3 form-inline px-3">
 
 
             <div class="form-group col col-md-4 p-0 ">
@@ -59,7 +59,7 @@
             </div>
 
 
-
+            <!-- Defense -->
             <div class="col col-md-4">
                 <div class="media">
                     <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-shield-shaded" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -81,7 +81,8 @@
 
         </div>
 
-        <div class="row row-cols-1 row-cols-md-3 mt-5 ">
+        <!-- Pass -->
+        <div class="row row-cols-1 row-cols-md-3 mt-md-5 ">
             <div class="col col-md-4">
                 <div class="media">
                     <span class="material-icons" alt="pass">sports_soccer</span>
@@ -97,6 +98,7 @@
                 </div>
             </div>
 
+            <!-- Keeper -->
             <div class="col col-md-4">
                 <div class="media">
                     <span class="material-icons" alt="keeper">pan_tool</span>
@@ -113,7 +115,8 @@
             </div>
 
 
-            <div class="col col-md-3 my-5 my-md-0 d-flex align-items-md-end mx-md-auto ">
+            <!-- Search button -->
+            <div class="col col-md-3 my-3 my-md-0 d-flex align-items-md-end mx-md-auto ">
                 <button (click)="search(maxAge.value, minAge.value, defense, attack, keeper, pass)" type="button" class="btn btn-warning w-100 mb-3 ">Search</button>
             </div>
         </div>
@@ -125,22 +128,22 @@
 
 
 
-<!-- Resultado de los filtros. -->
+<!-- Filter results. -->
 
 
-<div class="container mt-5 ml-3">
-    <div *ngFor="let player of players; let i = index">
+<div class="container mt-5 mx-3">
+    <div *ngFor="let player of players; let i = index" class="mx-auto">
 
         <!-- Player name and photo -->
 
-        <div class="row player-name mr-md-3 order-0 d-flex justify-content-between">
-            <h4 class="text-warning mt-2">{{ player.player.name }} <span class="text-light ml-3"> {{ player.player.age }} </span> </h4>
-            <h5 class="text-light mt-2">Initial price: <span class="text-warning ml-5"> {{player.initialPrice | currency: 'EUR': true}} </span></h5>
+        <div class="row w-100 player-name mr-md-3 mt-5 order-0 d-flex justify-content-between">
+            <h4 class="text-warning mt-2">{{ player.player.name }} <span class="text-light ml-3"> {{ player.player.age }} years old</span> </h4>
+            <h5 class="text-light mt-md-2">Initial price: <span class="text-warning ml-md-5"> {{player.initialPrice }} € </span></h5>
         </div>
         <div class="row mt-3">
-            <!-- <div class="col-4 col-md-2">
-                <img src="../../assets/Images/player/messi.jpg" alt="Messi" class="market-player mx-md-auto d-block mt-3">
-            </div> -->
+            <div class="col-4 col-md-2 d-none d-md-inline">
+                <img [src]="player.img | noPlayerImage" alt="{{ player.name }}" class="market-player mx-md-auto d-block mt-3">
+            </div>
 
             <!-- Prgress-bar column1 -->
             <div class="col-12 col-md-3 text-light mt-3 order-2 order-md-1">
@@ -219,9 +222,9 @@
                 <!-- Bid value -->
                 <div class="media mb-3">
                     <span class="material-icons text-light">attach_money</span>
-                    <form class="media">
-                        <input class="input mx-3 col-md-6" type="number" id="bid" name="bid" placeholder="Bid value">
-                        <button type="submit col-md-6" class="btn input p-0 w-100 mr-3 btn-warning">Bid now!</button>
+                    <form class="media col">
+                        <input class="input mr-3 col-6 col-md-6" type="number" id="bid" name="bid" placeholder="Bid value">
+                        <button type="submit col col-md-6" class="btn input p-0 w-100 mr-3 btn-warning">Bid now!</button>
                     </form>
                 </div>
                 <!-- Team -->
