@@ -1,3 +1,5 @@
+Proyecto final, creando en equipo una web interactiva de manager football.
+
 # FootballManager
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
